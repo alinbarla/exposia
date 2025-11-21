@@ -85,7 +85,7 @@ export default function ModernHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
+              className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 sm:mb-6 leading-tight"
             >
               <span className="block">Fastighetsfotografi</span>
               <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
@@ -97,7 +97,7 @@ export default function ModernHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-white/70 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-base sm:text-base md:text-lg lg:text-xl text-white/70 mb-8 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
               Stockholms ledande fastighetsfotograf. Fastighetsfotografering, bostadsvideo, drönarfotografi och 3D-planritning. Hjälper mäklare och fastighetsägare sälja snabbare med garanterad 24h-leverans. För lägenheter och villor i Stockholms län.
             </motion.p>
@@ -109,13 +109,13 @@ export default function ModernHero() {
               className="flex flex-col w-full sm:w-auto sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
             >
               <Link href="#pricing">
-                <Button className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 h-10 sm:h-12 px-4 sm:px-6 md:px-8 text-sm sm:text-base w-full sm:w-auto">
+                <Button className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 h-12 sm:h-12 px-6 sm:px-6 md:px-8 text-base sm:text-base w-full sm:w-auto min-h-[48px]">
                   Priser
-                  <ArrowRight className="ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-4 sm:w-4" />
                 </Button>
               </Link>
               <a href="mailto:info@exposia.se">
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-4 sm:px-6 md:px-8 text-sm sm:text-base w-full sm:w-auto" aria-label="Kontakta oss via e-post">
+                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-12 sm:h-12 px-6 sm:px-6 md:px-8 text-base sm:text-base w-full sm:w-auto min-h-[48px]" aria-label="Kontakta oss via e-post">
                   Kontakta oss
                 </Button>
               </a>

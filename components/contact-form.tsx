@@ -353,12 +353,12 @@ function ContactFormContent() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 mx-2 sm:mx-0"
           >
             {/* Step 1: Plan Summary */}
             {currentStep === 1 && (
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">Din valda plan</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-5">Din valda plan</h2>
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{planData.name}</h3>
@@ -367,12 +367,12 @@ function ContactFormContent() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Ingår i paketet:</h4>
-                    <ul className="space-y-2">
+                    <h4 className="font-semibold mb-3 text-base">Ingår i paketet:</h4>
+                    <ul className="space-y-3">
                       {planData.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2">
+                        <li key={index} className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-white/80">{feature}</span>
+                          <span className="text-white/80 text-base leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>

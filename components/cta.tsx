@@ -25,20 +25,20 @@ export default function ModernCta() {
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-amber-500 rounded-2xl blur-lg opacity-70"></div>
             <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 sm:p-8 md:p-12 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Redo att presentera ditt objekt professionellt med fastighetsfotografi?</h2>
-              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto">
+              <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-6 leading-tight">Redo att presentera ditt objekt professionellt med fastighetsfotografi?</h2>
+              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
                 Gå med bland hundratals nöjda mäklare och fastighetsägare i Stockholm som redan använder vår professionella fastighetsfotografering och bostadsvideo för att sälja sina objekt snabbare. Våra fastighetsbilder och fastighetsvideor ökar intresset och hjälper till med snabbare fastighetsförsäljning.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">
                 <Link href="#pricing">
-                  <Button className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 h-10 sm:h-12 px-4 sm:px-6 md:px-8 text-sm sm:text-base w-full sm:w-auto">
+                  <Button className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 h-12 sm:h-12 px-6 sm:px-6 md:px-8 text-base sm:text-base w-full sm:w-auto min-h-[48px]">
                     Priser
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <a href="mailto:info@exposia.se">
-                  <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-4 sm:px-6 md:px-8 text-sm sm:text-base w-full sm:w-auto" aria-label="Kontakta oss via e-post">
+                  <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-12 sm:h-12 px-6 sm:px-6 md:px-8 text-base sm:text-base w-full sm:w-auto min-h-[48px]" aria-label="Kontakta oss via e-post">
                     Kontakta oss
                   </Button>
                 </a>

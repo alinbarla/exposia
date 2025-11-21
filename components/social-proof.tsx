@@ -64,8 +64,8 @@ export default function SocialProof() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-base sm:text-lg text-amber-400 font-medium mb-2">Förtroende av mäklare och fastighetsägare</p>
-          <h2 id="social-proof-heading" className="text-xl sm:text-2xl md:text-3xl font-bold text-white">Gå med bland hundratals nöjda kunder</h2>
+          <p className="text-base sm:text-lg text-amber-400 font-medium mb-3">Förtroende av mäklare och fastighetsägare</p>
+          <h2 id="social-proof-heading" className="text-2xl sm:text-2xl md:text-3xl font-bold text-white">Gå med bland hundratals nöjda kunder</h2>
         </motion.div>
 
         {/* Broker logos */}
@@ -123,7 +123,7 @@ export default function SocialProof() {
                     {stat.value}
                   </div>
                   <p 
-                    className="text-white/70 text-sm sm:text-base truncate flex items-center justify-center gap-1"
+                    className="text-white/70 text-base sm:text-base truncate flex items-center justify-center gap-1 leading-relaxed"
                     aria-label={`${stat.value} ${stat.label}`}
                   >
                     {stat.label}

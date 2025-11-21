@@ -116,8 +116,8 @@ export default function ModernFeatures() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Våra tjänster</h2>
-          <p className="text-sm sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-3">Våra tjänster</h2>
+          <p className="text-base sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto">
             Professionella lösningar för att presentera dina fastigheter på bästa sätt
           </p>
         </motion.div>
@@ -141,8 +141,8 @@ export default function ModernFeatures() {
           </div>
 
           {/* Mobile feature title display - only visible on mobile */}
-          <div className="sm:hidden text-center mb-4">
-            <h3 className="text-lg font-bold">{features.find(f => f.id === activeTab)?.title}</h3>
+          <div className="sm:hidden text-center mb-6">
+            <h3 className="text-xl font-bold">{features.find(f => f.id === activeTab)?.title}</h3>
           </div>
 
           <div style={contentStyle} className="relative">
@@ -171,18 +171,18 @@ export default function ModernFeatures() {
                       </div>
                     </div>
                     
-                    <p className="text-white/70 text-sm sm:text-base mb-4 mt-8 sm:mb-6">{feature.description}</p>
+                    <p className="text-white/70 text-base sm:text-base mb-6 mt-8 sm:mb-6 leading-relaxed">{feature.description}</p>
 
                     {/* Benefits list - show all items */}
                     <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-3 text-sm sm:text-base">Ingår i paketet:</h4>
-                      <ul className="space-y-2 sm:space-y-3">
+                      <h4 className="text-white font-semibold mb-4 text-base sm:text-base">Ingår i paketet:</h4>
+                      <ul className="space-y-3 sm:space-y-3">
                         {feature.benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm sm:text-base">
-                            <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-gradient-to-r from-red-500 to-amber-500 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                          <li key={index} className="flex items-start gap-3 text-base sm:text-base">
+                            <div className="h-5 w-5 sm:h-5 sm:w-5 rounded-full bg-gradient-to-r from-red-500 to-amber-500 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                               ✓
                             </div>
-                            <span className="text-white/80">{benefit}</span>
+                            <span className="text-white/80 leading-relaxed">{benefit}</span>
                           </li>
                         ))}
                       </ul>

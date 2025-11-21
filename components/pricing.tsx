@@ -106,11 +106,11 @@ export default function ModernPricing() {
         >
           <h2
             id="pricing-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4"
+            className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-4"
           >
             Tydliga priser
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
             Välj det paket som passar bäst för ditt objekt. Kontakta oss för skräddarsydda lösningar.
           </p>
 
@@ -121,7 +121,7 @@ export default function ModernPricing() {
                 <button
                   ref={apartmentButtonRef}
                   onClick={() => setIsVilla(false)}
-                  className={`relative z-10 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full transition-colors focus:outline-none border-0 whitespace-nowrap ${
+                  className={`relative z-10 px-5 sm:px-6 py-2.5 sm:py-2 rounded-full transition-colors focus:outline-none border-0 whitespace-nowrap text-base sm:text-base min-h-[44px] ${
                     !isVilla ? "text-white" : "text-white/70"
                   }`}
                   aria-pressed={!isVilla}
@@ -132,7 +132,7 @@ export default function ModernPricing() {
                 <button
                   ref={villaButtonRef}
                   onClick={() => setIsVilla(true)}
-                  className={`relative z-10 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full transition-colors focus:outline-none border-0 whitespace-nowrap ${
+                  className={`relative z-10 px-5 sm:px-6 py-2.5 sm:py-2 rounded-full transition-colors focus:outline-none border-0 whitespace-nowrap text-base sm:text-base min-h-[44px] ${
                     isVilla ? "text-white" : "text-white/70"
                   }`}
                   aria-pressed={isVilla}
@@ -178,10 +178,10 @@ export default function ModernPricing() {
                 }`}
               >
                 <div className="p-5 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3">
                     {plan.name}
                   </h3>
-                  <p className="text-white/70 text-sm mb-5 sm:mb-6">
+                  <p className="text-white/70 text-base mb-6 sm:mb-6 leading-relaxed">
                     {plan.description}
                   </p>
 
@@ -208,16 +208,16 @@ export default function ModernPricing() {
                       exkl. moms
                     </p>
                     {plan.hasFastDelivery && (
-                      <div className="flex items-center gap-1 mt-2 text-amber-400">
-                        <Zap className="h-3 w-3 sm:h-4 sm:w-4" />
-                        <span className="text-xs sm:text-sm font-medium">24h snabbleverans</span>
+                      <div className="flex items-center gap-1.5 mt-2 text-amber-400">
+                        <Zap className="h-4 w-4 sm:h-4 sm:w-4" />
+                        <span className="text-sm sm:text-sm font-medium">24h snabbleverans</span>
                       </div>
                     )}
                   </div>
 
                   <Link href={`/contact?plan=${encodeURIComponent(plan.name)}&type=${isVilla ? 'villa' : 'apartment'}`}>
                     <Button
-                      className={`w-full mb-6 sm:mb-8 py-2.5 sm:py-3 text-sm sm:text-base focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none ${
+                      className={`w-full mb-6 sm:mb-8 py-3 sm:py-3 text-base sm:text-base min-h-[48px] focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black focus:outline-none ${
                         plan.popular
                           ? "bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0"
                           : "bg-white/10 hover:bg-white/20 text-white"
@@ -243,7 +243,7 @@ export default function ModernPricing() {
                         >
                           <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white" />
                         </div>
-                        <span className="text-white/80 text-sm sm:text-base">
+                        <span className="text-white/80 text-base sm:text-base leading-relaxed">
                           {feature}
                         </span>
                       </li>

@@ -78,8 +78,8 @@ export default function FaqSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Vanliga frågor</h2>
-          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-4">Vanliga frågor</h2>
+          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
             Har du frågor? Vi är här för att hjälpa. Om du inte hittar svaret här, kontakta oss gärna.
           </p>
         </motion.div>
@@ -98,10 +98,10 @@ export default function FaqSection() {
                   value={`item-${index}`}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden"
                 >
-                  <AccordionTrigger className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-lg font-medium hover:no-underline hover:bg-white/5 text-left">
+                  <AccordionTrigger className="px-4 sm:px-6 py-4 sm:py-4 text-base sm:text-lg font-medium hover:no-underline hover:bg-white/5 text-left min-h-[56px]">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base text-white/70">
+                  <AccordionContent className="px-4 sm:px-6 py-4 sm:py-4 text-base sm:text-base text-white/70 leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
