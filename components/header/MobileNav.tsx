@@ -43,6 +43,13 @@ export default function MobileNav({ isOpen }: MobileNavProps) {
               Kontakt
             </Button>
           </a>
+          <Link href="#pricing">
+            <Button
+              className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 h-10 shadow-lg shadow-amber-500/20 active:opacity-90 w-full"
+            >
+              Priser
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
