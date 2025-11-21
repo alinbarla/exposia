@@ -6,7 +6,12 @@ import ModernHeader from "@/components/header"
 import ModernFooter from "@/components/footer"
 import StructuredData from "@/components/structured-data"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://exposia.se"),
@@ -119,11 +124,20 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <head>
+        {/* Critical CSS inline for faster initial render */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            body{background:#000;color:#fff;margin:0;font-family:${inter.style.fontFamily},system-ui,-apple-system,sans-serif}
+            *{box-sizing:border-box}
+            .min-h-screen{min-height:100vh}
+          `
+        }} />
         {/* Preconnect to Google Tag Manager for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager - async to avoid blocking */}
         <script
+          async
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -136,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <StructuredData />
         <link rel="canonical" href="https://exposia.se" />
       </head>
-      <body className={`${inter.className} bg-black text-white`}>
+      <body className={`${inter.variable} ${inter.className} bg-black text-white`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

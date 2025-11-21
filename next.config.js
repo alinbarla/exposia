@@ -51,6 +51,8 @@ const nextConfig = {
     // Disable scroll restoration to prevent auto-scrolling on refresh
     scrollRestoration: false,
   },
+  // Optimize CSS loading
+  optimizeFonts: true,
   // Add compiler options for production
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
