@@ -51,22 +51,11 @@ const nextConfig = {
     // Disable scroll restoration to prevent auto-scrolling on refresh
     scrollRestoration: false,
   },
-  // Optimize CSS loading
-  optimizeFonts: true,
   // Add compiler options for production
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Target modern browsers to reduce polyfills
-  swcMinify: true,
-  webpack(config, { dev, isServer }) {
-    // Optimize for modern browsers
-    if (!isServer && !dev) {
-      config.optimization = {
-        ...config.optimization,
-        moduleIds: 'deterministic',
-      };
-    }
+  webpack(config, { dev }) {
     const rules = config.module.rules
       .find((rule) => typeof rule.oneOf === "object")
       .oneOf.filter((rule) => Array.isArray(rule.use));
