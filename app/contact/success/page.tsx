@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Check, Calendar, MapPin, Package, User, Mail, Phone, Zap } from "lucide-react";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ContactHeader from "@/components/header/ContactHeader";
 
-export default function SuccessPage() {
+function SuccessContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [orderData, setOrderData] = useState<any>(null);
@@ -278,6 +278,25 @@ export default function SuccessPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-black text-white">
+          <ContactHeader />
+          <div className="pt-20 sm:pt-24 pb-16 px-4 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-white/70">Laddar...</p>
+            </div>
+          </div>
+        </div>
+      }
+    >
+      <SuccessContent />
+    </Suspense>
   );
 }
 
