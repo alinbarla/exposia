@@ -57,7 +57,16 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  webpack(config, { dev }) {
+  // Target modern browsers to reduce polyfills
+  swcMinify: true,
+  webpack(config, { dev, isServer }) {
+    // Optimize for modern browsers
+    if (!isServer && !dev) {
+      config.optimization = {
+        ...config.optimization,
+        moduleIds: 'deterministic',
+      };
+    }
     const rules = config.module.rules
       .find((rule) => typeof rule.oneOf === "object")
       .oneOf.filter((rule) => Array.isArray(rule.use));

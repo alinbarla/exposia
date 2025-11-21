@@ -132,9 +132,11 @@ export default function RootLayout({
             .min-h-screen{min-height:100vh}
           `
         }} />
-        {/* Preconnect to Google Tag Manager for faster loading */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {/* Preconnect to critical origins for faster loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         {/* Google Tag Manager - async to avoid blocking */}
         <script
           async
