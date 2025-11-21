@@ -23,13 +23,6 @@ export default function DesktopNav() {
         </Link>
 
         <Link 
-          href="#pricing" 
-          className="text-white/80 hover:text-white transition-colors py-2 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
-        >
-          Priser
-        </Link>
-
-        <Link 
           href="#testimonials" 
           className="text-white/80 hover:text-white transition-colors py-2 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
         >
@@ -53,13 +46,6 @@ export default function DesktopNav() {
             Kontakt
           </Button>
         </a>
-        <Link href="#pricing">
-          <Button 
-            className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-shadow text-sm lg:text-base px-3 lg:px-4"
-          >
-            Priser
-          </Button>
-        </Link>
       </div>
     </>
   )

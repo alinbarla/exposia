@@ -29,10 +29,6 @@ export default function MobileNav({ isOpen }: MobileNavProps) {
           Så fungerar det
         </Link>
 
-        <Link href="#pricing" className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10">
-          Priser
-        </Link>
-
         <Link href="#testimonials" className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10">
           Omdömen
         </Link>
@@ -47,13 +43,6 @@ export default function MobileNav({ isOpen }: MobileNavProps) {
               Kontakt
             </Button>
           </a>
-          <Link href="#pricing">
-            <Button
-              className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 h-10 shadow-lg shadow-amber-500/20 active:opacity-90 w-full"
-            >
-              Priser
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
