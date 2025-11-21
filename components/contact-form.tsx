@@ -536,10 +536,18 @@ function ContactFormContent() {
                       })}
                     </>
                   )}
-                  <div className="flex justify-between items-center pt-3 border-t border-white/10 mt-3">
-                    <span className="text-lg font-semibold">Totalt:</span>
+                  <div className="flex justify-between items-center pt-2 border-t border-white/10 mt-2">
+                    <span className="text-white/70">Subtotal:</span>
+                    <span className="font-semibold">{calculateTotal()} kr</span>
+                  </div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-white/70">Moms (25%):</span>
+                    <span className="font-semibold">{calculateVAT()} kr</span>
+                  </div>
+                  <div className="flex justify-between items-center pt-3 border-t border-white/20 mt-3">
+                    <span className="text-lg font-semibold">Totalt inkl. moms:</span>
                     <span className="text-2xl font-bold bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
-                      {calculateTotal()} kr
+                      {calculateTotalWithVAT()} kr
                     </span>
                   </div>
                 </div>
