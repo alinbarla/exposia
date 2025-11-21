@@ -479,7 +479,8 @@ function ContactFormContent() {
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                     min={new Date().toISOString().split("T")[0]}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 [color-scheme:dark]"
+                    className="w-full max-w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-amber-500 [color-scheme:dark] text-sm sm:text-base"
+                    style={{ fontSize: '16px' }}
                   />
                 </div>
               </div>
