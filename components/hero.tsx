@@ -87,9 +87,9 @@ export default function ModernHero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
             >
-              <span className="block">Vi är mäklarens</span>
+              <span className="block">Fastighetsfotografi</span>
               <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
-                bästa vän
+                & Bostadsvideo i Stockholm
               </span>
             </motion.h1>
 
@@ -99,7 +99,7 @@ export default function ModernHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-sm sm:text-base md:text-lg lg:text-xl text-white/70 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Tillgängliga när du behöver oss. Professionell fastighetsfotografi och videografi med garanterad 24-timmarsleverans. Vi levererar högkvalitativt visuellt material som säljer ditt objekt snabbare – alltid på tid, alltid i professionell kvalitet.
+              Stockholms ledande fastighetsfotograf. Fastighetsfotografering, bostadsvideo, drönarfotografi och 3D-planritning. Hjälper mäklare och fastighetsägare sälja snabbare med garanterad 24h-leverans. För lägenheter och villor i Stockholms län.
             </motion.p>
 
             <motion.div
@@ -140,7 +140,7 @@ export default function ModernHero() {
                   >
                     <Image
                       src={imageUrl}
-                      alt={`Mäklare från Stockholm ${i + 1}`}
+                      alt={`Fastighetsmäklare från Stockholm som använder professionell fastighetsfotografi ${i + 1}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 32px, 40px"

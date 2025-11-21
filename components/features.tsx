@@ -20,9 +20,9 @@ export default function ModernFeatures() {
     {
       id: "fotografering",
       icon: <Camera className="h-5 w-5" />,
-      title: "Fotografering",
+      title: "Fastighetsfotografi & Bostadsfotografi",
       description:
-        "Professionell fotografering som fångar din bostads bästa vinklar och presenterar den på ett attraktivt sätt för potentiella köpare.",
+        "Professionell fastighetsfotografering som fångar din bostads bästa vinklar med interiörfoto, exteriörfoto, skymningsbilder och drönarfotografi. Våra fastighetsbilder presenterar objektet på ett attraktivt sätt för potentiella köpare och hjälper till att sälja bostaden snabbare.",
       benefits: [
         "1 session med 20-25 interiörfoton",
         "3 exteriörfoton",
@@ -35,9 +35,9 @@ export default function ModernFeatures() {
     {
       id: "bostadsvideo",
       icon: <Video className="h-5 w-5" />,
-      title: "Bostadsvideo",
+      title: "Bostadsvideo & Fastighetsvideo",
       description:
-        "En kort film som presenterar bostaden med hjälp av drönare och film inomhus. Ger en helhetsbild av objektet.",
+        "Professionell bostadsvideo och fastighetsfilm som presenterar bostaden med drönarvideo och film inomhus. Våra fastighetsvideor ger en helhetsbild av objektet och är perfekt för fastighetsmarknadsföring på sociala medier och fastighetsmäklarsidor.",
       benefits: [
         "30 sekunders video (horisontell eller vertikal)",
         "Drönarvideo inkluderad",
@@ -47,9 +47,9 @@ export default function ModernFeatures() {
     {
       id: "extratjanster",
       icon: <Home className="h-5 w-5" />,
-      title: "Extratjänster",
+      title: "Extratjänster för Fastighetsförsäljning",
       description:
-        "Ytterligare tjänster för att förbättra presentationen av din fastighet och öka intresset från potentiella köpare.",
+        "Ytterligare tjänster för att förbättra presentationen av din fastighet och öka intresset från potentiella köpare. Vi erbjuder 3D-planritning, säsongsbyte av fastighetsbilder och fastighetsvideor med mäklarpresentation för optimal fastighetsmarknadsföring.",
       benefits: [
         "3D-planritning",
         "Foto med säsongsbyte - Digital omvandling av bilder för att visa bostaden under olika årstider",

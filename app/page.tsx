@@ -86,28 +86,30 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black px-0 sm:px-4 text-white">
       <ScrollRestoration />
-      <Hero />
-      <LazyLoad>
-        <SocialProof />
-      </LazyLoad>
-      <LazyLoad>
-        <HowItWorks />
-      </LazyLoad>
-      <LazyLoad>
-        <Features />
-      </LazyLoad>
-      <LazyLoad>
-        <Testimonials />
-      </LazyLoad>
-      <LazyLoad>
-        <Pricing />
-      </LazyLoad>
-      <LazyLoad>
-        <FaqSection />
-      </LazyLoad>
-      <LazyLoad>
-        <Cta />
-      </LazyLoad>
+      <article itemScope itemType="https://schema.org/Article">
+        <Hero />
+        <LazyLoad>
+          <SocialProof />
+        </LazyLoad>
+        <LazyLoad>
+          <HowItWorks />
+        </LazyLoad>
+        <LazyLoad>
+          <Features />
+        </LazyLoad>
+        <LazyLoad>
+          <Testimonials />
+        </LazyLoad>
+        <LazyLoad>
+          <Pricing />
+        </LazyLoad>
+        <LazyLoad>
+          <FaqSection />
+        </LazyLoad>
+        <LazyLoad>
+          <Cta />
+        </LazyLoad>
+      </article>
     </div>
   );
 }

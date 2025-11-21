@@ -25,9 +25,9 @@ export default function ModernCta() {
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-amber-500 rounded-2xl blur-lg opacity-70"></div>
             <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 sm:p-8 md:p-12 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Redo att presentera ditt objekt professionellt?</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Redo att presentera ditt objekt professionellt med fastighetsfotografi?</h2>
               <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Gå med bland hundratals nöjda mäklare och fastighetsägare som redan använder våra tjänster för att sälja sina objekt snabbare.
+                Gå med bland hundratals nöjda mäklare och fastighetsägare i Stockholm som redan använder vår professionella fastighetsfotografering och bostadsvideo för att sälja sina objekt snabbare. Våra fastighetsbilder och fastighetsvideor ökar intresset och hjälper till med snabbare fastighetsförsäljning.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

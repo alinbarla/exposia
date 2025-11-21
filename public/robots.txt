@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://exposia.se/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /contact/success
+
+# Allow all images and assets
+Allow: /images/
+Allow: /public/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.avif$
+Allow: /*.svg$
+Allow: /*.mp4$
+

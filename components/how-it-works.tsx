@@ -16,30 +16,30 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Kontakta oss",
+      title: "Kontakta oss för fastighetsfotografi",
       description:
-        "Boka en tid genom att kontakta oss via telefon eller e-post. Vi planerar tillsammans fotograferingen.",
+        "Boka en tid för fastighetsfotografering genom att kontakta oss via telefon eller e-post. Vi planerar tillsammans fotograferingen av din bostad, lägenhet eller villa i Stockholm.",
       image: "/kontakt.avif",
     },
     {
       number: "02",
-      title: "Fotografering",
+      title: "Professionell fastighetsfotografering",
       description:
-        "Vi kommer till objektet och fotograferar med professionell utrustning. Vi tar hand om allt från belysning till komposition.",
+        "Vi kommer till objektet och utför professionell fastighetsfotografering med avancerad utrustning. Vi tar hand om allt från belysning till komposition för att skapa perfekta fastighetsbilder.",
       image: "/foto.webp",
     },
     {
       number: "03",
-      title: "Redigering",
+      title: "Professionell redigering av fastighetsbilder",
       description:
-        "Vi redigerar bilderna professionellt för att framhäva objektets bästa sidor och skapa attraktiva visuella material.",
+        "Vi redigerar fastighetsbilderna professionellt för att framhäva objektets bästa sidor och skapa attraktiva visuella material för fastighetsmarknadsföring och försäljning.",
       image: "/edit.png",
     },
     {
       number: "04",
       title: "Leverans 24h express",
       description:
-        "Du får dina färdiga bilder och videor snabbt levererade, redo att användas i marknadsföring och försäljning.",
+        "Du får dina färdiga fastighetsbilder och bostadsvideor snabbt levererade, redo att användas i fastighetsmarknadsföring, på fastighetsmäklarsidor och för försäljning av din bostad.",
       image: "/delivery.avif",
       hasLightning: true,
     },

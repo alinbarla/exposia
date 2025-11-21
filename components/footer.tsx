@@ -18,7 +18,7 @@ export default function ModernFooter() {
               />
             </Link>
             <p className="text-white/70 mb-6">
-              Professionell fastighetsfotografi och videografi. Vi hjälper dig att presentera dina objekt på bästa möjliga sätt.
+              Professionell fastighetsfotografi och bostadsvideo i Stockholm. Vi är specialister på fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning. Vi hjälper mäklare och fastighetsägare att presentera sina objekt på bästa möjliga sätt med högkvalitativt visuellt material för snabbare fastighetsförsäljning.
             </p>
             <div className="text-white/70 mb-6 space-y-2">
               <p><strong>Alin Barla</strong></p>
