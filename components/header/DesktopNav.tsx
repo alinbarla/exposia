@@ -42,6 +42,7 @@ export default function DesktopNav() {
           <Button 
             variant="ghost" 
             className="text-white hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
+            aria-label="Kontakta oss via e-post"
           >
             Kontakt
           </Button>

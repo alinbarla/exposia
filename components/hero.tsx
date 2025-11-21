@@ -115,7 +115,7 @@ export default function ModernHero() {
                 </Button>
               </Link>
               <a href="mailto:info@exposia.se">
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-4 sm:px-6 md:px-8 text-sm sm:text-base w-full sm:w-auto">
+                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-4 sm:px-6 md:px-8 text-sm sm:text-base w-full sm:w-auto" aria-label="Kontakta oss via e-post">
                   Kontakta oss
                 </Button>
               </a>

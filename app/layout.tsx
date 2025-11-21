@@ -119,6 +119,9 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <head>
+        {/* Preconnect to Google Tag Manager for faster loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{

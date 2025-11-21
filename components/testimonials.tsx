@@ -126,8 +126,10 @@ export default function ModernTestimonials() {
                         <Image
                           src={testimonials[current].avatar || "/placeholder.svg"}
                           alt={`Portrait of ${testimonials[current].author}`}
-                          fill
-                          className="object-cover rounded-full"
+                          width={96}
+                          height={96}
+                          className="object-cover rounded-full w-full h-full"
+                          sizes="(max-width: 640px) 80px, 96px"
                         />
                       </div>
                     </div>

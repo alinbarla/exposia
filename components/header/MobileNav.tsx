@@ -39,7 +39,7 @@ export default function MobileNav({ isOpen }: MobileNavProps) {
 
         <div className="flex flex-col gap-2 pt-3">
           <a href="mailto:info@exposia.se">
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 active:bg-white/20 w-full">
+            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 active:bg-white/20 w-full" aria-label="Kontakta oss via e-post">
               Kontakt
             </Button>
           </a>

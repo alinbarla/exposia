@@ -7,10 +7,11 @@ export default function Logo() {
       <Image
         src="/exposia logo.png"
         alt="Exposia Photography"
-        width={200}
-        height={72}
+        width={220}
+        height={80}
         className="h-12 sm:h-16 w-auto object-contain group-hover:opacity-90 transition-opacity"
         priority
+        sizes="(max-width: 640px) 200px, 220px"
       />
     </Link>
   )
