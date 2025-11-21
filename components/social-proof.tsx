@@ -15,10 +15,10 @@ export default function SocialProof() {
   ];
 
   const stats = [
-    { value: "100+", label: "Nöjda kunder med fastighetsfotografi", hasLightning: false },
-    { value: "500+", label: "Fotograferade fastigheter i Stockholm", hasLightning: false },
-    { value: "24h", label: "Leveranstid för fastighetsbilder", hasLightning: true },
-    { value: "100%", label: "Professionell kvalitet på bostadsfotografi", hasLightning: false },
+    { value: "100+", label: "Nöjda kunder", hasLightning: false },
+    { value: "500+", label: "Fotograferade objekt", hasLightning: false },
+    { value: "24h", label: "Leveranstid", hasLightning: true },
+    { value: "100%", label: "Professionell kvalitet", hasLightning: false },
   ]
 
   const containerVariants = {
