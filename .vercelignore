@@ -1,0 +1,4 @@
+# Ignore files that might cause issues
+.yarn/cache
+.yarn/install-state.gz
+
