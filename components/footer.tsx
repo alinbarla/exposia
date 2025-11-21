@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Twitter, Facebook, Instagram, Linkedin, Github } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 
 export default function ModernFooter() {
   return (
@@ -26,26 +26,14 @@ export default function ModernFooter() {
               <p>Telefon: <a href="tel:0763441168" className="text-amber-400 hover:text-amber-300">076-344 11 68</a></p>
             </div>
             <div className="flex space-x-4">
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="#" className="text-white/50 hover:text-white transition-colors">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
+              </a>
             </div>
           </div>
 
