@@ -171,7 +171,7 @@ export default function ModernFeatures() {
                       </div>
                     </div>
                     
-                    <p className="text-white/70 text-base sm:text-base mb-6 mt-8 sm:mb-6 leading-relaxed">{feature.description}</p>
+                    <p className="hidden md:block text-white/70 text-base sm:text-base mb-6 mt-8 sm:mb-6 leading-relaxed">{feature.description}</p>
 
                     {/* Benefits list - show all items */}
                     <div className="mb-4">
