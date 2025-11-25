@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning med garanterad 24-timmarsleverans. Perfekt för mäklare och fastighetsägare.",
     images: [
       {
-        url: "/exposia social rich image.png",
+        url: "exposia-social-rich-image.png",
         width: 1200,
         height: 630,
         alt: "Exposia - Professionell fastighetsfotografi och bostadsvideo i Stockholm",
