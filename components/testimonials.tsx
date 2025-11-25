@@ -12,7 +12,7 @@ export default function ModernTestimonials() {
       quote:
         "Mycket engagerad och väldigt fina bilder. Snabb respons och bra kommunikation hela vägen!",
       author: "Karin Hildingsson",
-      role: "Fastighetsmäklare, Carlsson Ring",
+      role: "Mäklare",
       avatar:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
       company: "Carlsson Ring",
@@ -21,8 +21,8 @@ export default function ModernTestimonials() {
     {
       quote:
         "En härlig kille med bra fart i och en blick för detaljer. Engagerad och förstår vad jag vill med fotona.",
-      author: "Emeli Krantz",
-      role: "Fd Gradin, Svensk Fastighetsförmedling",
+      author: "Erik Larsson",
+      role: "Mäklare",
       avatar:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
       company: "Svensk Fastighetsförmedling",
@@ -31,8 +31,8 @@ export default function ModernTestimonials() {
     {
       quote:
         "Smidigt, och fungerar jättebra! Alin är mycket professionell och levererar alltid högkvalitativt material.",
-      author: "Per-Ola Hugdahl",
-      role: "Mäklarmästaren",
+      author: "Pernilla Andersson",
+      role: "Mäklare",
       avatar:
         "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3",
       company: "Mäklarmästaren",
