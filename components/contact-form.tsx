@@ -327,8 +327,8 @@ function ContactFormContent() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center px-4 py-12">
-      <div className="w-full max-w-2xl">
+    <div className="w-full flex items-center justify-center px-4 py-4 sm:py-8 mx-auto">
+      <div className="w-full max-w-2xl mx-auto">
         {/* Progress bar */}
         <div className="mb-8">
           <div className="flex justify-between mb-2">
@@ -353,7 +353,7 @@ function ContactFormContent() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 mx-2 sm:mx-0"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 w-full mx-auto"
           >
             {/* Step 1: Plan Summary */}
             {currentStep === 1 && (

@@ -11,9 +11,9 @@ const ContactHeader = dynamic(() => import("@/components/header/ContactHeader"),
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white flex flex-col">
       <ContactHeader />
-      <div className="pt-20 sm:pt-24">
+      <div className="flex-1 flex items-center justify-center min-h-0">
         <ContactForm />
       </div>
     </div>
