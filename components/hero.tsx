@@ -182,8 +182,10 @@ export default function ModernHero() {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     className="w-full h-auto aspect-video rounded-lg object-cover"
                     style={{ pointerEvents: 'none' }}
+                    aria-label="Exposia fastighetsfotografi och bostadsvideo demonstration"
                   />
                   
                   {/* Logo overlay that fades in and out */}

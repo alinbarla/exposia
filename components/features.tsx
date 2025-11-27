@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Zap, Users, Shield, BarChart3, Camera, Video, Home } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
@@ -162,11 +163,13 @@ export default function ModernFeatures() {
                     <div className="relative order-first mb-4 md:hidden min-h-[185px]">
                       <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-amber-500 rounded-2xl blur-md opacity-70"></div>
                       <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden p-1">
-                        <img
+                        <Image
                           src={feature.image || "/placeholder.svg"}
                           alt={feature.title}
-                          className="w-full h-auto rounded-lg"
-                           
+                          width={600}
+                          height={400}
+                          className="w-full h-auto rounded-lg object-cover"
+                          sizes="(max-width: 768px) 100vw, 600px"
                         />
                       </div>
                     </div>
@@ -198,10 +201,13 @@ export default function ModernFeatures() {
                   >
                     <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-amber-500 rounded-2xl blur-lg opacity-70"></div>
                     <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden p-1 ">
-                      <img
+                      <Image
                         src={feature.image || "/placeholder.svg"}
                         alt={feature.title} 
-                        className="w-full h-auto rounded-lg"
+                        width={800}
+                        height={600}
+                        className="w-full h-auto rounded-lg object-cover"
+                        sizes="(max-width: 768px) 100vw, 800px"
                       />
                     </div>
                   </motion.div>

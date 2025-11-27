@@ -43,7 +43,7 @@ export default function FaqSection() {
     {
       question: "Hur bokar jag en fotografering eller video?",
       answer:
-        "Du kan boka direkt via vårt kontaktformulär på hemsidan, ringa oss på 076-344 11 68 eller skicka e-post till info@exposia.se. Vi kontaktar dig inom 3 timmar för att bekräfta bokningen och planera detaljerna.",
+        "Du kan boka direkt via vårt kontaktformulär på hemsidan, ringa oss på 076-344 11 68 eller skicka e-post via kontaktformuläret. Vi kontaktar dig inom 3 timmar för att bekräfta bokningen och planera detaljerna.",
     },
     {
       question: "Arbetar ni i hela Stockholms län?",

@@ -7,30 +7,33 @@ export default function DesktopNav() {
 
   return (
     <>
-      <nav className="hidden md:flex items-center gap-4 lg:gap-8">
+      <nav 
+        className="hidden md:flex items-center gap-4 lg:gap-8"
+        aria-label="Huvudmeny"
+      >
         <Link 
-          href="#features" 
+          href="#features"
           className="text-white/80 hover:text-white transition-colors py-2 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
         >
           Tjänster
         </Link>
 
         <Link 
-          href="#how-it-works" 
+          href="#how-it-works"
           className="text-white/80 hover:text-white transition-colors py-2 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
         >
           Så fungerar det
         </Link>
 
         <Link 
-          href="#testimonials" 
+          href="#testimonials"
           className="text-white/80 hover:text-white transition-colors py-2 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
         >
           Omdömen
         </Link>
 
         <Link 
-          href="#faq" 
+          href="#faq"
           className="text-white/80 hover:text-white transition-colors py-2 px-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
         >
           Vanliga frågor
@@ -38,11 +41,10 @@ export default function DesktopNav() {
       </nav>
 
       <div className="hidden md:flex items-center gap-2 lg:gap-4">
-        <a href="mailto:info@exposia.se">
+        <a href="mailto:info@exposia.se" aria-label="Kontakta oss via e-post">
           <Button 
             variant="ghost" 
             className="text-white hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-amber-500/70 text-sm lg:text-base"
-            aria-label="Kontakta oss via e-post"
           >
             Kontakt
           </Button>

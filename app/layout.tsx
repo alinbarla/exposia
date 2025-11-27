@@ -6,15 +6,20 @@ import ModernHeader from "@/components/header"
 import ModernFooter from "@/components/footer"
 import StructuredData from "@/components/structured-data"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-inter",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://exposia.se"),
   title: {
-    default: "Exposia - Professionell Fastighetsfotografi & Bostadsvideo i Stockholm | 24h Leverans",
-    template: "%s | Exposia - Fastighetsfotografi Stockholm",
+    default: "Exposia - Fastighetsfotografi & Bostadsvideo Stockholm",
+    template: "%s | Exposia",
   },
-  description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Vi erbjuder fastighetsfotografering, drönarfotografering, fastighetsvideo och 3D-planritning med garanterad 24-timmarsleverans. Perfekt för mäklare och fastighetsägare som vill sälja snabbare. Kontakta Alin Barla på info@exposia.se eller 076-344 11 68.",
+  description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning med 24h leverans. Perfekt för mäklare och fastighetsägare.",
   keywords: [
     "fastighetsfotografi",
     "fastighetsfotografering",
@@ -86,8 +91,8 @@ export const metadata: Metadata = {
     locale: "sv_SE",
     url: "https://exposia.se",
     siteName: "Exposia - Fastighetsfotografi Stockholm",
-    title: "Exposia - Professionell Fastighetsfotografi & Bostadsvideo i Stockholm | 24h Leverans",
-    description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning med garanterad 24-timmarsleverans. Perfekt för mäklare och fastighetsägare.",
+    title: "Exposia - Fastighetsfotografi & Bostadsvideo Stockholm",
+    description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning med 24h leverans. Perfekt för mäklare och fastighetsägare.",
     images: [
       {
         url: "https://exposia.se/exposia-rich-image.png",
@@ -100,13 +105,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Exposia - Professionell Fastighetsfotografi & Bostadsvideo i Stockholm",
+    title: "Exposia - Fastighetsfotografi & Bostadsvideo Stockholm",
     description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. 24h leverans. Perfekt för mäklare och fastighetsägare.",
     images: ["https://exposia.se/exposia-rich-image.png"],
     creator: "@exposia",
   },
   alternates: {
     canonical: "https://exposia.se",
+    languages: {
+      "sv-SE": "https://exposia.se",
+    },
   },
   category: "Fastighetsfotografi",
 }
@@ -122,8 +130,9 @@ export default function RootLayout({
         {/* Preconnect to Google Tag Manager for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager - Loaded asynchronously to prevent render blocking */}
         <script
+          async
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

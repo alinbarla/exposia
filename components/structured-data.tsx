@@ -121,6 +121,38 @@ export default function StructuredData() {
       },
       "query-input": "required name=search_term_string",
     },
+    hasPart: [
+      {
+        "@type": "SiteNavigationElement",
+        name: "Tjänster",
+        url: "https://exposia.se/#features",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Så fungerar det",
+        url: "https://exposia.se/#how-it-works",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Omdömen",
+        url: "https://exposia.se/#testimonials",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Vanliga frågor",
+        url: "https://exposia.se/#faq",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Priser",
+        url: "https://exposia.se/#pricing",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Kontakt",
+        url: "https://exposia.se/contact",
+      },
+    ],
   };
 
   const breadcrumbSchema = {
@@ -132,6 +164,46 @@ export default function StructuredData() {
         position: 1,
         name: "Hem",
         item: "https://exposia.se",
+      },
+    ],
+  };
+
+  // Site Navigation Element schema for better sitelinks support
+  const siteNavigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    name: "Huvudmeny",
+    url: "https://exposia.se",
+    hasPart: [
+      {
+        "@type": "SiteNavigationElement",
+        name: "Tjänster",
+        url: "https://exposia.se/#features",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Så fungerar det",
+        url: "https://exposia.se/#how-it-works",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Omdömen",
+        url: "https://exposia.se/#testimonials",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Vanliga frågor",
+        url: "https://exposia.se/#faq",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Priser",
+        url: "https://exposia.se/#pricing",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Kontakt",
+        url: "https://exposia.se/contact",
       },
     ],
   };
@@ -153,6 +225,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
       />
     </>
   );

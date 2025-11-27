@@ -17,29 +17,44 @@ export default function MobileNav({ isOpen }: MobileNavProps) {
         isOpen ? "max-h-[calc(100vh-80px)] sm:max-h-[calc(100vh-96px)] opacity-100" : "max-h-0 opacity-0"
       )}
     >
-      <div className={cn(
-        "container mx-auto px-3 py-4 flex flex-col gap-2 transition-all duration-300 overflow-y-auto",
-        isOpen ? "translate-y-0" : "-translate-y-4"
-      )}>
-        <Link href="#features" className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10">
+      <nav 
+        className={cn(
+          "container mx-auto px-3 py-4 flex flex-col gap-2 transition-all duration-300 overflow-y-auto",
+          isOpen ? "translate-y-0" : "-translate-y-4"
+        )}
+        aria-label="Huvudmeny"
+      >
+        <Link 
+          href="#features" 
+          className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10"
+        >
           Tjänster
         </Link>
 
-        <Link href="#how-it-works" className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10">
+        <Link 
+          href="#how-it-works" 
+          className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10"
+        >
           Så fungerar det
         </Link>
 
-        <Link href="#testimonials" className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10">
+        <Link 
+          href="#testimonials" 
+          className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10"
+        >
           Omdömen
         </Link>
 
-        <Link href="#faq" className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10">
+        <Link 
+          href="#faq" 
+          className="py-2 px-2 border-b border-white/10 hover:bg-white/5 rounded-md transition-colors active:bg-white/10"
+        >
           Vanliga frågor
         </Link>
 
         <div className="flex flex-col gap-2 pt-3">
-          <a href="mailto:info@exposia.se">
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 active:bg-white/20 w-full" aria-label="Kontakta oss via e-post">
+          <a href="mailto:info@exposia.se" aria-label="Kontakta oss via e-post">
+            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-10 active:bg-white/20 w-full">
               Kontakt
             </Button>
           </a>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import ObfuscatedEmail from "@/components/obfuscated-email"
 
 export default function ModernCta() {
   return (
@@ -44,7 +45,9 @@ export default function ModernCta() {
                 </a>
               </div>
 
-              <p className="mt-4 sm:mt-6 text-white/50 text-xs sm:text-sm">Ring 076-344 11 68 eller skicka e-post till info@exposia.se</p>
+              <p className="mt-4 sm:mt-6 text-white/50 text-xs sm:text-sm">
+                Ring 076-344 11 68 eller skicka e-post till <ObfuscatedEmail email="info@exposia.se" className="text-white/70 hover:text-white underline" />
+              </p>
             </div>
           </div>
         </motion.div>

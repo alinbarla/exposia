@@ -20,6 +20,22 @@ const hashOnlyIdent = (context, _, exportName) =>
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // URL canonicalization - redirect www to non-www
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.exposia.se',
+          },
+        ],
+        destination: 'https://exposia.se/:path*',
+        permanent: true,
+      },
+    ]
+  },
   // Add image optimization configuration
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],

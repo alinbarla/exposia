@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram } from "lucide-react"
+import ObfuscatedEmail from "@/components/obfuscated-email"
 
 export default function ModernFooter() {
   return (
@@ -22,7 +23,7 @@ export default function ModernFooter() {
             </p>
             <div className="text-white/70 mb-6 space-y-2">
               <p><strong>Alin Barla</strong></p>
-              <p>E-post: <a href="mailto:info@exposia.se" className="text-amber-400 hover:text-amber-300">info@exposia.se</a></p>
+              <p>E-post: <ObfuscatedEmail email="info@exposia.se" className="text-amber-400 hover:text-amber-300" /></p>
               <p>Telefon: <a href="tel:0763441168" className="text-amber-400 hover:text-amber-300">076-344 11 68</a></p>
             </div>
             <div className="flex space-x-4">
@@ -82,9 +83,7 @@ export default function ModernFooter() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:info@exposia.se" className="text-white/70 hover:text-white transition-colors">
-                  Kontakt
-                </a>
+                <ObfuscatedEmail email="info@exposia.se" className="text-white/70 hover:text-white transition-colors" displayText="Kontakt" />
               </li>
             </ul>
           </div>
@@ -93,9 +92,7 @@ export default function ModernFooter() {
             <h3 className="text-lg font-bold mb-4">Kontakt</h3>
             <ul className="space-y-3">
               <li className="text-white/70">
-                <a href="mailto:info@exposia.se" className="hover:text-white transition-colors">
-                  info@exposia.se
-                </a>
+                <ObfuscatedEmail email="info@exposia.se" className="hover:text-white transition-colors" />
               </li>
               <li className="text-white/70">
                 <a href="tel:0763441168" className="hover:text-white transition-colors">
