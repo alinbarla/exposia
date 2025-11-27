@@ -87,9 +87,9 @@ export default function ModernHero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 sm:mb-6 leading-tight"
             >
-              <span className="block">Fastighetsfotografi</span>
+              <span className="block">Exposia - Fastighetsfotografi</span>
               <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
-                & Bostadsvideo i Stockholm
+                & Bostadsvideo Stockholm
               </span>
             </motion.h1>
 
@@ -99,7 +99,7 @@ export default function ModernHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base sm:text-base md:text-lg lg:text-xl text-white/70 mb-8 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Exposia är Stockholms ledande fastighetsfotograf. Vi erbjuder professionell fastighetsfotografering, bostadsvideo i Stockholm, drönarfotografi och 3D-planritning. Hjälper mäklare och fastighetsägare sälja snabbare med garanterad 24h-leverans. För lägenheter och villor i Stockholms län.
+              Exposia är Stockholms ledande fastighetsfotograf. Vi erbjuder professionell fastighetsfotografering och bostadsvideo i Stockholm. Vår bostadsvideo i Stockholm kombineras med drönarfotografi och 3D-planritning. Exposia hjälper mäklare och fastighetsägare i Stockholm sälja snabbare med garanterad 24h-leverans. För lägenheter och villor i Stockholms län.
             </motion.p>
 
             <motion.div

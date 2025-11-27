@@ -130,9 +130,8 @@ export default function RootLayout({
         {/* Preconnect to Google Tag Manager for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Google Tag Manager - Loaded asynchronously to prevent render blocking */}
+        {/* Google Tag Manager - Primary implementation in head */}
         <script
-          async
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -146,15 +145,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="canonical" href="https://exposia.se" />
       </head>
       <body className={`${inter.className} bg-black text-white`}>
-        {/* Google Tag Manager (noscript) - Loaded asynchronously */}
+        {/* Google Tag Manager (noscript) - Fallback for when JavaScript is disabled */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5C7KWK8L"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
-            loading="lazy"
-            title="Google Tag Manager"
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}

@@ -38,7 +38,7 @@ export default function ModernFeatures() {
       icon: <Video className="h-5 w-5" />,
       title: "Bostadsvideo & Fastighetsvideo",
       description:
-        "Professionell bostadsvideo och fastighetsfilm som presenterar bostaden med drönarvideo och film inomhus. Våra fastighetsvideor ger en helhetsbild av objektet och är perfekt för fastighetsmarknadsföring på sociala medier och fastighetsmäklarsidor.",
+        "Exposia erbjuder professionell bostadsvideo i Stockholm och fastighetsfilm som presenterar bostaden med drönarvideo och film inomhus. Våra bostadsvideor i Stockholm ger en helhetsbild av objektet och är perfekt för fastighetsmarknadsföring på sociala medier och fastighetsmäklarsidor.",
       benefits: [
         "30 sekunders video (horisontell eller vertikal)",
         "Drönarvideo inkluderad",
@@ -119,7 +119,7 @@ export default function ModernFeatures() {
         >
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-3">Våra tjänster</h2>
           <p className="text-base sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto">
-            Professionella lösningar för att presentera dina fastigheter på bästa sätt
+            Exposia erbjuder professionella lösningar för fastighetsfotografi och bostadsvideo i Stockholm. Vi hjälper dig att presentera dina fastigheter på bästa sätt.
           </p>
         </motion.div>
 

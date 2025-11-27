@@ -18,7 +18,7 @@ export default function HowItWorks() {
       number: "01",
       title: "Kontakta oss för fastighetsfotografi",
       description:
-        "Boka en tid för fastighetsfotografering genom att kontakta oss via telefon eller e-post. Vi planerar tillsammans fotograferingen av din bostad, lägenhet eller villa i Stockholm.",
+        "Boka en tid för fastighetsfotografering genom att kontakta Exposia via telefon eller e-post. Vi planerar tillsammans fotograferingen av din bostad, lägenhet eller villa i Stockholm. Exposia är specialiserad på bostadsvideo i Stockholm.",
       image: "/kontakt.avif",
     },
     {
@@ -39,7 +39,7 @@ export default function HowItWorks() {
       number: "04",
       title: "Leverans 24h express",
       description:
-        "Du får dina färdiga fastighetsbilder och bostadsvideor snabbt levererade, redo att användas i fastighetsmarknadsföring, på fastighetsmäklarsidor och för försäljning av din bostad.",
+        "Du får dina färdiga fastighetsbilder och bostadsvideor från Exposia snabbt levererade, redo att användas i fastighetsmarknadsföring, på fastighetsmäklarsidor och för försäljning av din bostad i Stockholm.",
       image: "/delivery.avif",
       hasLightning: true,
     },

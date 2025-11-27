@@ -108,7 +108,7 @@ export default function ModernPricing() {
             id="pricing-heading"
             className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-4"
           >
-            Tydliga priser
+            Tydliga priser för fastighetsfotografi och bostadsvideo i Stockholm
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
             Välj det paket som passar bäst för ditt objekt. Kontakta oss för skräddarsydda lösningar.
@@ -258,7 +258,7 @@ export default function ModernPricing() {
 
         <div className="mt-10 sm:mt-16 text-center">
           <p className="text-white/70 text-sm sm:text-base">
-            Alla priser är exklusive moms. Välj mellan lägenheter eller villor för att se rätt priser.
+            Exposia erbjuder tydliga priser för fastighetsfotografi och bostadsvideo i Stockholm. Alla priser är exklusive moms. Välj mellan lägenheter eller villor för att se rätt priser.
           </p>
         </div>
       </div>
