@@ -25,14 +25,14 @@ export default function HowItWorks() {
       number: "02",
       title: "Professionell fastighetsfotografering",
       description:
-        "Vi kommer till objektet och utför professionell fastighetsfotografering med avancerad utrustning. Vi tar hand om allt från belysning till komposition för att skapa perfekta fastighetsbilder.",
+        "Vi kommer till objektet och utför professionell fastighetsfotografering med avancerad utrustning. Vi tar hand om allt från belysning till komposition för att skapa perfekta fastighetsbilder. Exposias fotograf anländer med professionell utrustning inklusive drönare för exteriörbilder, professionell belysningsutrustning för interiörfoto och allt som behövs för att fånga din fastighets bästa sidor. Vi arbetar metodiskt genom varje rum och vinkel för att säkerställa att varje fastighetsbild visar objektet i bästa möjliga ljus.",
       image: "/foto.webp",
     },
     {
       number: "03",
       title: "Professionell redigering av fastighetsbilder",
       description:
-        "Vi redigerar fastighetsbilderna professionellt för att framhäva objektets bästa sidor och skapa attraktiva visuella material för fastighetsmarknadsföring och försäljning.",
+        "Vi redigerar fastighetsbilderna professionellt för att framhäva objektets bästa sidor och skapa attraktiva visuella material för fastighetsmarknadsföring och försäljning. Exposias redigeringsprocess inkluderar färgkorrigering, belysningsjusteringar, perspektivkorrigering och förbättringar som gör att varje fastighetsbild ser professionell och attraktiv ut. Vi säkerställer att alla bilder har konsekvent kvalitet och stil som passar perfekt för fastighetsmarknadsföring i Stockholm.",
       image: "/edit.png",
     },
     {

@@ -80,7 +80,7 @@ export default function FaqSection() {
         >
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-4">Vanliga frågor</h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Har du frågor? Vi är här för att hjälpa. Om du inte hittar svaret här, kontakta oss gärna.
+            Har du frågor om fastighetsfotografi, bostadsvideo eller våra tjänster i Stockholm? Vi är här för att hjälpa. Exposia har många års erfarenhet av professionell fastighetsfotografering och bostadsvideo i Stockholm. Om du inte hittar svaret här, kontakta oss gärna så hjälper vi dig att hitta den perfekta lösningen för din fastighet. Vi svarar på alla frågor om våra tjänster, priser, leveranstider och processen för fastighetsfotografering och bostadsvideo.
           </p>
         </motion.div>
 

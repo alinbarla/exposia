@@ -111,7 +111,7 @@ export default function ModernPricing() {
             Tydliga priser för fastighetsfotografi och bostadsvideo i Stockholm
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Välj det paket som passar bäst för ditt objekt. Kontakta oss för skräddarsydda lösningar.
+            Välj det paket som passar bäst för ditt objekt. Exposia erbjuder transparenta priser för fastighetsfotografi och bostadsvideo i Stockholm. Alla våra paket inkluderar professionell fotografering, redigering och snabb leverans. Kontakta oss för skräddarsydda lösningar som passar just din fastighet och dina behov. Vi hjälper mäklare och fastighetsägare i Stockholm att presentera sina objekt på bästa sätt med högkvalitativt visuellt material.
           </p>
 
           <div className="relative flex items-center justify-center mt-6 sm:mt-8">

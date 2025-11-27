@@ -23,7 +23,7 @@ export default function ModernFeatures() {
       icon: <Camera className="h-5 w-5" />,
       title: "Fastighetsfotografi & Bostadsfotografi",
       description:
-        "Professionell fastighetsfotografering som fångar din bostads bästa vinklar med interiörfoto, exteriörfoto, skymningsbilder och drönarfotografi. Våra fastighetsbilder presenterar objektet på ett attraktivt sätt för potentiella köpare och hjälper till att sälja bostaden snabbare.",
+        "Professionell fastighetsfotografering som fångar din bostads bästa vinklar med interiörfoto, exteriörfoto, skymningsbilder och drönarfotografi. Våra fastighetsbilder presenterar objektet på ett attraktivt sätt för potentiella köpare och hjälper till att sälja bostaden snabbare. Exposia använder avancerad fototeknik och professionell belysning för att skapa fastighetsbilder som framhäver objektets unika karaktär och lockar fler intressenter. Varje fastighetsfoto är noggrant komponerat och redigerat för att maximera visuell påverkan och öka intresset från potentiella köpare i Stockholm.",
       benefits: [
         "1 session med 20-25 interiörfoton",
         "3 exteriörfoton",
@@ -50,7 +50,7 @@ export default function ModernFeatures() {
       icon: <Home className="h-5 w-5" />,
       title: "Extratjänster för Fastighetsförsäljning",
       description:
-        "Ytterligare tjänster för att förbättra presentationen av din fastighet och öka intresset från potentiella köpare. Vi erbjuder 3D-planritning, säsongsbyte av fastighetsbilder och fastighetsvideor med mäklarpresentation för optimal fastighetsmarknadsföring.",
+        "Ytterligare tjänster för att förbättra presentationen av din fastighet och öka intresset från potentiella köpare. Vi erbjuder 3D-planritning, säsongsbyte av fastighetsbilder och fastighetsvideor med mäklarpresentation för optimal fastighetsmarknadsföring. Exposia hjälper dig att skapa en komplett marknadsföringspaket som visar din fastighet från alla vinklar och ökar chanserna för en snabb försäljning i Stockholm. Våra extratjänster kompletterar vårt huvudpaket med fastighetsfotografi och bostadsvideo för att ge dig den bästa möjliga presentationen av ditt objekt.",
       benefits: [
         "3D-planritning",
         "Foto med säsongsbyte - Digital omvandling av bilder för att visa bostaden under olika årstider",
