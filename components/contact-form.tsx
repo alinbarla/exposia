@@ -18,6 +18,7 @@ interface AdditionalService {
   name: string;
   price: number;
   description: string;
+  hasQuantity?: boolean; // For services that can have multiple quantities
 }
 
 const additionalServices: AdditionalService[] = [
@@ -39,6 +40,13 @@ const additionalServices: AdditionalService[] = [
     price: 550,
     description: "Videos of property with broker presentation",
   },
+  {
+    id: "drone-photos",
+    name: "Drönarbilder",
+    price: 70,
+    description: "Professionella drönarfoton",
+    hasQuantity: true,
+  },
 ];
 
 function ContactFormContent() {
@@ -50,6 +58,7 @@ function ContactFormContent() {
     address: "",
     date: "",
     additionalServices: [] as string[],
+    serviceQuantities: {} as Record<string, number>, // Track quantities for services
     fullName: "",
     email: "",
     phone: "",
@@ -80,7 +89,6 @@ function ContactFormContent() {
           "1 session med 20-25 interiörfoton",
           "3 exteriörfoton",
           "1 skymningsbild",
-          "3 drönarbilder",
           "1 planritning",
         ],
       },
@@ -99,7 +107,6 @@ function ContactFormContent() {
           "1 session med 20-25 interiörfoton",
           "3 exteriörfoton",
           "1 skymningsbild",
-          "3 drönarbilder",
           "1 planritning",
           "30 sekunders video (horisontell eller vertikal)",
           "Drönarvideo inkluderad",
@@ -234,19 +241,61 @@ function ContactFormContent() {
   };
 
   const toggleAdditionalService = (serviceId: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      additionalServices: prev.additionalServices.includes(serviceId)
-        ? prev.additionalServices.filter((id) => id !== serviceId)
-        : [...prev.additionalServices, serviceId],
-    }));
+    setFormData((prev) => {
+      const isIncluded = prev.additionalServices.includes(serviceId);
+      const service = additionalServices.find((s) => s.id === serviceId);
+      
+      return {
+        ...prev,
+        additionalServices: isIncluded
+          ? prev.additionalServices.filter((id) => id !== serviceId)
+          : [...prev.additionalServices, serviceId],
+        // Set default quantity to 1 if service has quantity and is being added
+        serviceQuantities: isIncluded
+          ? { ...prev.serviceQuantities, [serviceId]: 0 }
+          : service?.hasQuantity
+          ? { ...prev.serviceQuantities, [serviceId]: 1 }
+          : prev.serviceQuantities,
+      };
+    });
+  };
+
+  const updateServiceQuantity = (serviceId: string, quantity: number) => {
+    setFormData((prev) => {
+      const newQuantity = Math.max(0, quantity);
+      // If quantity becomes 0, remove the service from selected services
+      if (newQuantity === 0 && prev.additionalServices.includes(serviceId)) {
+        return {
+          ...prev,
+          additionalServices: prev.additionalServices.filter((id) => id !== serviceId),
+          serviceQuantities: {
+            ...prev.serviceQuantities,
+            [serviceId]: 0,
+          },
+        };
+      }
+      return {
+        ...prev,
+        serviceQuantities: {
+          ...prev.serviceQuantities,
+          [serviceId]: newQuantity,
+        },
+      };
+    });
   };
 
   const calculateTotal = () => {
     const basePrice = planData?.price || 0;
     const additionalPrice = formData.additionalServices.reduce((sum, serviceId) => {
       const service = additionalServices.find((s) => s.id === serviceId);
-      return sum + (service?.price || 0);
+      if (!service) return sum;
+      
+      // If service has quantity, multiply price by quantity
+      if (service.hasQuantity) {
+        const quantity = formData.serviceQuantities[serviceId] || 0;
+        return sum + (service.price * quantity);
+      }
+      return sum + service.price;
     }, 0);
     return basePrice + additionalPrice;
   };
@@ -270,7 +319,16 @@ function ContactFormContent() {
     try {
       const selectedServices = formData.additionalServices.map((id) => {
         const service = additionalServices.find((s) => s.id === id);
-        return service ? { name: service.name, price: service.price } : null;
+        if (!service) return null;
+        
+        if (service.hasQuantity) {
+          const quantity = formData.serviceQuantities[id] || 0;
+          return {
+            name: `${service.name} (${quantity} st)`,
+            price: service.price * quantity,
+          };
+        }
+        return { name: service.name, price: service.price };
       }).filter(Boolean);
 
       const submissionData = {
@@ -492,30 +550,85 @@ function ContactFormContent() {
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Vill du lägga till extratjänster?</h2>
                 <p className="text-white/70 mb-6">Välj eventuella extratjänster</p>
                 <div className="space-y-3 mb-6">
-                  {additionalServices.map((service) => (
-                    <label
-                      key={service.id}
-                      className={`flex items-start gap-3 p-4 border rounded-lg cursor-pointer transition-colors ${
-                        formData.additionalServices.includes(service.id)
-                          ? "border-amber-500 bg-amber-500/10"
-                          : "border-white/20 bg-white/5 hover:bg-white/10"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={formData.additionalServices.includes(service.id)}
-                        onChange={() => toggleAdditionalService(service.id)}
-                        className="mt-1 h-5 w-5 rounded border-white/20 bg-white/10 text-amber-500 focus:ring-amber-500"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="font-semibold">{service.name}</span>
-                          <span className="text-amber-400 font-semibold">+{service.price} kr</span>
-                        </div>
-                        <p className="text-sm text-white/70">{service.description}</p>
+                  {additionalServices.map((service) => {
+                    const isSelected = formData.additionalServices.includes(service.id);
+                    const quantity = formData.serviceQuantities[service.id] || 0;
+                    const totalPrice = service.hasQuantity ? service.price * quantity : service.price;
+                    
+                    return (
+                      <div
+                        key={service.id}
+                        className={`p-4 border rounded-lg transition-colors ${
+                          isSelected
+                            ? "border-amber-500 bg-amber-500/10"
+                            : "border-white/20 bg-white/5"
+                        }`}
+                      >
+                        <label className="flex items-start gap-3 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={isSelected}
+                            onChange={() => toggleAdditionalService(service.id)}
+                            className="mt-1 h-5 w-5 rounded border-white/20 bg-white/10 text-amber-500 focus:ring-amber-500"
+                          />
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between mb-1">
+                              <span className="font-semibold">{service.name}</span>
+                              <span className="text-amber-400 font-semibold">
+                                {service.hasQuantity 
+                                  ? `+${service.price} kr/st` 
+                                  : `+${service.price} kr`}
+                              </span>
+                            </div>
+                            <p className="text-sm text-white/70 mb-2">{service.description}</p>
+                            {service.hasQuantity && isSelected && (
+                              <div className="flex items-center gap-3 mt-3">
+                                <label className="text-sm text-white/70">Antal:</label>
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      updateServiceQuantity(service.id, Math.max(0, quantity - 1));
+                                    }}
+                                    className="w-8 h-8 rounded border border-white/20 bg-white/10 text-white hover:bg-white/20 flex items-center justify-center"
+                                  >
+                                    -
+                                  </button>
+                                  <input
+                                    type="number"
+                                    min="0"
+                                    value={quantity}
+                                    onChange={(e) => {
+                                      const val = parseInt(e.target.value) || 0;
+                                      updateServiceQuantity(service.id, Math.max(0, val));
+                                    }}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="w-16 px-2 py-1 bg-white/10 border border-white/20 rounded text-white text-center focus:outline-none focus:ring-2 focus:ring-amber-500"
+                                  />
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      updateServiceQuantity(service.id, quantity + 1);
+                                    }}
+                                    className="w-8 h-8 rounded border border-white/20 bg-white/10 text-white hover:bg-white/20 flex items-center justify-center"
+                                  >
+                                    +
+                                  </button>
+                                </div>
+                                {quantity > 0 && (
+                                  <span className="text-amber-400 font-semibold ml-auto">
+                                    Totalt: {totalPrice} kr
+                                  </span>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        </label>
                       </div>
-                    </label>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {/* Total Preview */}
@@ -528,12 +641,20 @@ function ContactFormContent() {
                     <>
                       {formData.additionalServices.map((serviceId) => {
                         const service = additionalServices.find((s) => s.id === serviceId);
-                        return service ? (
+                        if (!service) return null;
+                        
+                        const quantity = formData.serviceQuantities[serviceId] || 0;
+                        const totalPrice = service.hasQuantity ? service.price * quantity : service.price;
+                        const displayName = service.hasQuantity && quantity > 0
+                          ? `${service.name} (${quantity} st)`
+                          : service.name;
+                        
+                        return (
                           <div key={serviceId} className="flex justify-between items-center mb-2">
-                            <span className="text-white/70">{service.name}:</span>
-                            <span className="font-semibold">+{service.price} kr</span>
+                            <span className="text-white/70">{displayName}:</span>
+                            <span className="font-semibold">+{totalPrice} kr</span>
                           </div>
-                        ) : null;
+                        );
                       })}
                     </>
                   )}
@@ -713,15 +834,23 @@ function ContactFormContent() {
                       <ul className="space-y-2 ml-9">
                         {formData.additionalServices.map((serviceId) => {
                           const service = additionalServices.find((s) => s.id === serviceId);
-                          return service ? (
+                          if (!service) return null;
+                          
+                          const quantity = formData.serviceQuantities[serviceId] || 0;
+                          const totalPrice = service.hasQuantity ? service.price * quantity : service.price;
+                          const displayName = service.hasQuantity && quantity > 0
+                            ? `${service.name} (${quantity} st)`
+                            : service.name;
+                          
+                          return (
                             <li key={serviceId} className="flex justify-between items-center">
                               <span className="text-white/90 flex items-center gap-2">
                                 <Check className="h-4 w-4 text-green-400 flex-shrink-0" />
-                                {service.name}
+                                {displayName}
                               </span>
-                              <span className="font-semibold text-green-400">+{service.price} kr</span>
+                              <span className="font-semibold text-green-400">+{totalPrice} kr</span>
                             </li>
-                          ) : null;
+                          );
                         })}
                       </ul>
                     </div>
@@ -744,12 +873,20 @@ function ContactFormContent() {
                         <>
                           {formData.additionalServices.map((serviceId) => {
                             const service = additionalServices.find((s) => s.id === serviceId);
-                            return service ? (
+                            if (!service) return null;
+                            
+                            const quantity = formData.serviceQuantities[serviceId] || 0;
+                            const totalPrice = service.hasQuantity ? service.price * quantity : service.price;
+                            const displayName = service.hasQuantity && quantity > 0
+                              ? `${service.name} (${quantity} st)`
+                              : service.name;
+                            
+                            return (
                               <div key={serviceId} className="flex justify-between items-center">
-                                <span className="text-white/80">{service.name}:</span>
-                                <span className="font-semibold text-white">+{service.price} kr</span>
+                                <span className="text-white/80">{displayName}:</span>
+                                <span className="font-semibold text-white">+{totalPrice} kr</span>
                               </div>
-                            ) : null;
+                            );
                           })}
                         </>
                       )}
