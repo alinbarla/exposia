@@ -81,17 +81,24 @@ export default function ModernHero() {
               </div>
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 sm:mb-6 leading-tight"
-            >
-              <span className="block">Exposia - Fastighetsfotografi</span>
-              <span className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 sm:mb-6 leading-tight">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="block"
+              >
+                Exposia - Fastighetsfotografi
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent block"
+              >
                 & Bostadsvideo Stockholm
-              </span>
-            </motion.h1>
+              </motion.span>
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}

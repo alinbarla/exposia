@@ -367,7 +367,7 @@ function ContactFormContent() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-3 text-base">Ingår i paketet:</h4>
+                    <h3 className="font-semibold mb-3 text-base">Ingår i paketet:</h3>
                     <ul className="space-y-3">
                       {planData.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-3">

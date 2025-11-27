@@ -135,7 +135,7 @@ export default function ModernTestimonials() {
                     </div>
 
                     <div className="text-center mt-4">
-                      <h4 className="font-bold">{testimonials[current].author}</h4>
+                      <h3 className="font-bold">{testimonials[current].author}</h3>
                       <p className="text-white/70 text-sm">{testimonials[current].role}</p>
                       <div className="flex justify-center mt-2" aria-label={`Rated ${testimonials[current].rating} out of 5 stars`}>
                         {[...Array(testimonials[current].rating)].map((_, i) => (

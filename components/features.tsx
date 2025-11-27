@@ -178,7 +178,7 @@ export default function ModernFeatures() {
 
                     {/* Benefits list - show all items */}
                     <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-4 text-base sm:text-base">Ingår i paketet:</h4>
+                      <h3 className="text-white font-semibold mb-4 text-base sm:text-base">Ingår i paketet:</h3>
                       <ul className="space-y-3 sm:space-y-3">
                         {feature.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start gap-3 text-base sm:text-base">
