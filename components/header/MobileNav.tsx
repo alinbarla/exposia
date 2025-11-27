@@ -66,7 +66,7 @@ export default function MobileNav({ isOpen }: MobileNavProps) {
             </Button>
           </Link>
         </div>
-      </div>
+      </nav>
     </div>
   )
 }
