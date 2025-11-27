@@ -99,7 +99,7 @@ export default function ModernHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base sm:text-base md:text-lg lg:text-xl text-white/70 mb-8 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Stockholms ledande fastighetsfotograf. Fastighetsfotografering, bostadsvideo, drönarfotografi och 3D-planritning. Hjälper mäklare och fastighetsägare sälja snabbare med garanterad 24h-leverans. För lägenheter och villor i Stockholms län.
+              Exposia är Stockholms ledande fastighetsfotograf. Vi erbjuder professionell fastighetsfotografering, bostadsvideo i Stockholm, drönarfotografi och 3D-planritning. Hjälper mäklare och fastighetsägare sälja snabbare med garanterad 24h-leverans. För lägenheter och villor i Stockholms län.
             </motion.p>
 
             <motion.div

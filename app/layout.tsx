@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "Exposia - Fastighetsfotografi & Bostadsvideo Stockholm",
     template: "%s | Exposia",
   },
-  description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning med 24h leverans. Perfekt för mäklare och fastighetsägare.",
+  description: "Exposia - Professionell fastighetsfotografi och bostadsvideo i Stockholm. Drönarfotografi, 3D-planritning med 24h leverans. Perfekt för mäklare.",
   keywords: [
     "fastighetsfotografi",
     "fastighetsfotografering",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     url: "https://exposia.se",
     siteName: "Exposia - Fastighetsfotografi Stockholm",
     title: "Exposia - Fastighetsfotografi & Bostadsvideo Stockholm",
-    description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. Fastighetsfotografering, drönarfotografi, fastighetsvideo och 3D-planritning med 24h leverans. Perfekt för mäklare och fastighetsägare.",
+    description: "Exposia - Professionell fastighetsfotografi och bostadsvideo i Stockholm. Drönarfotografi, 3D-planritning med 24h leverans. Perfekt för mäklare.",
     images: [
       {
         url: "https://exposia.se/exposia-rich-image.png",
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exposia - Fastighetsfotografi & Bostadsvideo Stockholm",
-    description: "Professionell fastighetsfotografi och bostadsvideo i Stockholm. 24h leverans. Perfekt för mäklare och fastighetsägare.",
+    description: "Exposia - Professionell fastighetsfotografi och bostadsvideo i Stockholm. 24h leverans. Perfekt för mäklare.",
     images: ["https://exposia.se/exposia-rich-image.png"],
     creator: "@exposia",
   },
@@ -146,13 +146,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="canonical" href="https://exposia.se" />
       </head>
       <body className={`${inter.className} bg-black text-white`}>
-        {/* Google Tag Manager (noscript) */}
+        {/* Google Tag Manager (noscript) - Loaded asynchronously */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5C7KWK8L"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
+            loading="lazy"
+            title="Google Tag Manager"
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
