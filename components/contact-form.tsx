@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
@@ -51,6 +51,7 @@ const additionalServices: AdditionalService[] = [
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
+  const formRef = useRef<HTMLDivElement>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [planData, setPlanData] = useState<PlanData | null>(null);
   const [formData, setFormData] = useState({
@@ -228,6 +229,25 @@ function ContactFormContent() {
     }
   };
 
+  // Scroll form into view when step changes
+  useEffect(() => {
+    // Small delay to ensure DOM is updated
+    const timer = setTimeout(() => {
+      if (formRef.current) {
+        const headerHeight = window.innerWidth >= 640 ? 96 : 80;
+        const formRect = formRef.current.getBoundingClientRect();
+        const scrollPosition = window.scrollY + formRect.top - headerHeight - 40; // 40px padding for better spacing
+        
+        window.scrollTo({
+          top: Math.max(0, scrollPosition),
+          behavior: 'smooth'
+        });
+      }
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [currentStep]);
+
   const handleNext = () => {
     if (currentStep < totalSteps && canProceed()) {
       setCurrentStep(currentStep + 1);
@@ -385,7 +405,7 @@ function ContactFormContent() {
   }
 
   return (
-    <div className="w-full flex items-center justify-center px-4 py-4 sm:py-8 mx-auto">
+    <div ref={formRef} className="w-full mx-auto pt-4 sm:pt-6">
       <div className="w-full max-w-2xl mx-auto">
         {/* Progress bar */}
         <div className="mb-8">
@@ -395,10 +415,11 @@ function ContactFormContent() {
           </div>
           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div
+              key={currentStep}
               className="h-full bg-gradient-to-r from-red-500 to-amber-500"
               initial={{ width: 0 }}
               animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             />
           </div>
         </div>
@@ -546,7 +567,7 @@ function ContactFormContent() {
 
             {/* Step 4: Additional Services */}
             {currentStep === 4 && (
-              <div>
+              <div className="scroll-mt-20">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Vill du lägga till extratjänster?</h2>
                 <p className="text-white/70 mb-6">Välj eventuella extratjänster</p>
                 <div className="space-y-3 mb-6">
