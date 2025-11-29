@@ -34,15 +34,15 @@ export default function ModernPricing() {
     return () => window.removeEventListener('resize', updateBackground);
   }, [isVilla]);
 
-  // Scroll to popular plan when hash is #pricing
+  // Scroll to pricing toggle when hash is #pricing or #pricing-toggle
   useEffect(() => {
-    if (window.location.hash === '#pricing') {
+    if (window.location.hash === '#pricing' || window.location.hash === '#pricing-toggle') {
       // Small delay to ensure DOM is ready
       setTimeout(() => {
-        const popularPlan = document.getElementById('popular-plan');
-        if (popularPlan) {
+        const pricingToggle = document.getElementById('pricing-toggle');
+        if (pricingToggle) {
           const headerHeight = window.innerWidth >= 640 ? 96 : 80;
-          const elementPosition = popularPlan.getBoundingClientRect().top;
+          const elementPosition = pricingToggle.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
           
           window.scrollTo({
@@ -129,10 +129,10 @@ export default function ModernPricing() {
             Tydliga priser för fastighetsfotografi och bostadsvideo i Stockholm
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Exposia erbjuder transparenta priser för fastighetsfotografi och bostadsvideo i Stockholm. Professionell fotografering, redigering och 24h leverans ingår. Perfekt för mäklare och fastighetsägare. Pricing starting at 1400kr
+            Exposia erbjuder transparenta priser för fastighetsfotografi och bostadsvideo i Stockholm. Professionell fotografering, redigering och 24h leverans ingår. Perfekt för mäklare och fastighetsägare. Pricing starting at 1400kr <span className="text-sm">(exkl. moms)</span>
           </p>
 
-          <div className="relative flex items-center justify-center mt-6 sm:mt-8">
+          <div id="pricing-toggle" className="relative flex items-center justify-center mt-6 sm:mt-8 scroll-mt-28 sm:scroll-mt-32">
             <fieldset className="bg-white/5 backdrop-blur-sm border border-white/10 p-1 rounded-full">
               <legend className="sr-only">Fastighetstyp</legend>
               <div className="relative flex">
@@ -175,11 +175,10 @@ export default function ModernPricing() {
             return (
             <motion.div
               key={`${plan.name}-${isVilla ? 'villa' : 'apartment'}`}
-              id={plan.popular ? "popular-plan" : undefined}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className={`relative ${plan.popular ? "md:-mt-4 md:mb-4 scroll-mt-28 sm:scroll-mt-32" : ""}`}
+              className={`relative ${plan.popular ? "md:-mt-4 md:mb-4" : ""}`}
               style={{ order: displayIndex }}
               role="listitem"
             >

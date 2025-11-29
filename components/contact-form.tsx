@@ -257,13 +257,13 @@ function ContactFormContent() {
 
   const handleNext = () => {
     if (currentStep < totalSteps && canProceed()) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep((prev) => prev + 1);
     }
   };
 
   const handleBack = () => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
+      setCurrentStep((prev) => prev - 1);
     }
   };
 
@@ -417,8 +417,12 @@ function ContactFormContent() {
         {/* Progress bar */}
         <div className="mb-8">
           <div className="flex justify-between mb-2">
-            <span className="text-sm text-white/70">Steg {currentStep} av {totalSteps}</span>
-            <span className="text-sm text-white/70">{Math.round((currentStep / totalSteps) * 100)}%</span>
+            <span className="text-sm text-white/70">
+              Steg {currentStep} av {totalSteps}
+            </span>
+            <span className="text-sm text-white/70">
+              {Math.round((currentStep / totalSteps) * 100)}%
+            </span>
           </div>
           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div

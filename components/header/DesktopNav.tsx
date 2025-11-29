@@ -49,7 +49,7 @@ export default function DesktopNav() {
             Kontakt
           </Button>
         </a>
-        <Link href="#popular-plan">
+        <Link href="#pricing-toggle">
           <Button 
             className="bg-gradient-to-r from-red-500 to-amber-500 hover:from-red-600 hover:to-amber-600 text-white border-0 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-shadow text-sm lg:text-base px-3 lg:px-4"
           >

@@ -57,7 +57,7 @@ export default function ModernFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#popular-plan" className="text-white/70 hover:text-white transition-colors">
+                <Link href="#pricing-toggle" className="text-white/70 hover:text-white transition-colors">
                   Priser
                 </Link>
               </li>
