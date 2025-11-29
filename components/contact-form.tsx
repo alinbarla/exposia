@@ -23,6 +23,13 @@ interface AdditionalService {
 
 const additionalServices: AdditionalService[] = [
   {
+    id: "extra-rooms",
+    name: "Extra rum",
+    price: 300,
+    description: "Extra rum för fotografering (300 kr per rum)",
+    hasQuantity: true,
+  },
+  {
     id: "3d-floor-plan",
     name: "3D Floor plan",
     price: 450,
@@ -85,7 +92,7 @@ function ContactFormContent() {
     const plans = [
       {
         name: "Fotografi",
-        price: isVilla ? 3200 : 2200,
+        price: isVilla ? 2600 : 1400,
         features: [
           "1 session med 20-25 interiörfoton",
           "3 exteriörfoton",
@@ -103,7 +110,7 @@ function ContactFormContent() {
       },
       {
         name: "Fotografi + Video",
-        price: isVilla ? 4800 : 3300,
+        price: isVilla ? 4000 : 2700,
         features: [
           "1 session med 20-25 interiörfoton",
           "3 exteriörfoton",
@@ -445,6 +452,14 @@ function ContactFormContent() {
                       {planData.price} kr
                     </p>
                   </div>
+                  <div className="p-4 bg-white/5 border border-white/10 rounded-lg mb-4">
+                    <p className="text-white/90 text-sm font-medium mb-2">Vad ingår:</p>
+                    <p className="text-white/70 text-sm">
+                      {planData.isVilla 
+                        ? "2 rum och alla övriga utrymmen ingår i paketet. Extra rum kan läggas till som extratjänst."
+                        : "1 rum och alla övriga utrymmen ingår i paketet. Extra rum kan läggas till som extratjänst."}
+                    </p>
+                  </div>
                   <div>
                     <h3 className="font-semibold mb-3 text-base">Ingår i paketet:</h3>
                     <ul className="space-y-3">
@@ -602,6 +617,11 @@ function ContactFormContent() {
                               </span>
                             </div>
                             <p className="text-sm text-white/70 mb-2">{service.description}</p>
+                            {service.id === "extra-rooms" && planData && (
+                              <p className="text-xs text-white/50 mb-2">
+                                {planData.isVilla ? "2 rum villa ingår" : "1 rum lägenhet ingår"}
+                              </p>
+                            )}
                             {service.hasQuantity && isSelected && (
                               <div className="flex items-center gap-3 mt-3">
                                 <label className="text-sm text-white/70">Antal:</label>

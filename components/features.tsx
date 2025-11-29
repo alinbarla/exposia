@@ -51,6 +51,7 @@ export default function ModernFeatures() {
       description:
         "Ytterligare tjänster för att förbättra presentationen av din fastighet och öka intresset från potentiella köpare. Vi erbjuder 3D-planritning, säsongsbyte av fastighetsbilder och fastighetsvideor med mäklarpresentation för optimal fastighetsmarknadsföring. Exposia hjälper dig att skapa en komplett marknadsföringspaket som visar din fastighet från alla vinklar och ökar chanserna för en snabb försäljning i Stockholm. Våra extratjänster kompletterar vårt huvudpaket med fastighetsfotografi och bostadsvideo för att ge dig den bästa möjliga presentationen av ditt objekt.",
       benefits: [
+        "Extra rum - För lägenheter ingår 1 rum, för villor ingår 2 rum. Extra rum kan läggas till (300 kr per rum)",
         "3D-planritning",
         "Foto med säsongsbyte - Digital omvandling av bilder för att visa bostaden under olika årstider",
         "Videor av fastighet med mäklarpresentation",

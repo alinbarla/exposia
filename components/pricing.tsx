@@ -34,12 +34,32 @@ export default function ModernPricing() {
     return () => window.removeEventListener('resize', updateBackground);
   }, [isVilla]);
 
+  // Scroll to popular plan when hash is #pricing
+  useEffect(() => {
+    if (window.location.hash === '#pricing') {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        const popularPlan = document.getElementById('popular-plan');
+        if (popularPlan) {
+          const headerHeight = window.innerWidth >= 640 ? 96 : 80;
+          const elementPosition = popularPlan.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, []);
+
   // Define plans directly so they recalculate on every render when isVilla changes
   const plans = [
     {
       name: "Fotografi",
       description: "Alla tjänster från fotografering inkluderade",
-      price: isVilla ? 3200 : 2200,
+      price: isVilla ? 2600 : 1400,
       features: [
         "1 session med 20-25 interiörfoton",
         "3 exteriörfoton",
@@ -65,9 +85,9 @@ export default function ModernPricing() {
     {
       name: "Fotografi + Video",
       description: "Alla tjänster från fotografi och video",
-      price: isVilla ? 4800 : 3300, // 25% discount rounded down to nearest hundred: 6400*0.75=4800, 4400*0.75=3300
-      fullPrice: isVilla ? 6400 : 4400, // Fotografi (3200/2200) + Video (3200/2200)
-      discount: 25, // 25% discount for both
+      price: isVilla ? 4000 : 2700,
+      fullPrice: isVilla ? 5800 : 3600, // Fotografi (2600/1400) + Video (3200/2200)
+      discount: Math.round((1 - (isVilla ? 4000 : 2700) / (isVilla ? 5800 : 3600)) * 100),
       features: [
         "1 session med 20-25 interiörfoton",
         "3 exteriörfoton",
@@ -85,7 +105,7 @@ export default function ModernPricing() {
   return (
     <section
       id="pricing"
-      className="py-16 sm:py-20 md:py-24 bg-black relative overflow-hidden"
+      className="py-16 sm:py-20 md:py-24 bg-black relative overflow-hidden scroll-mt-28 sm:scroll-mt-32"
       aria-labelledby="pricing-heading"
     >
       {/* Background elements */}
@@ -109,7 +129,7 @@ export default function ModernPricing() {
             Tydliga priser för fastighetsfotografi och bostadsvideo i Stockholm
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Välj det paket som passar bäst för ditt objekt. Exposia erbjuder transparenta priser för fastighetsfotografi och bostadsvideo i Stockholm. Alla våra paket inkluderar professionell fotografering, redigering och snabb leverans. Kontakta oss för skräddarsydda lösningar som passar just din fastighet och dina behov. Vi hjälper mäklare och fastighetsägare i Stockholm att presentera sina objekt på bästa sätt med högkvalitativt visuellt material.
+            Exposia erbjuder transparenta priser för fastighetsfotografi och bostadsvideo i Stockholm. Professionell fotografering, redigering och 24h leverans ingår. Perfekt för mäklare och fastighetsägare. Pricing starting at 1400kr
           </p>
 
           <div className="relative flex items-center justify-center mt-6 sm:mt-8">
@@ -155,10 +175,11 @@ export default function ModernPricing() {
             return (
             <motion.div
               key={`${plan.name}-${isVilla ? 'villa' : 'apartment'}`}
+              id={plan.popular ? "popular-plan" : undefined}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className={`relative ${plan.popular ? "md:-mt-4 md:mb-4" : ""}`}
+              className={`relative ${plan.popular ? "md:-mt-4 md:mb-4 scroll-mt-28 sm:scroll-mt-32" : ""}`}
               style={{ order: displayIndex }}
               role="listitem"
             >
@@ -179,9 +200,18 @@ export default function ModernPricing() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-3">
                     {plan.name}
                   </h3>
-                  <p className="text-white/70 text-base mb-6 sm:mb-6 leading-relaxed">
+                  <p className="text-white/70 text-base mb-4 sm:mb-4 leading-relaxed">
                     {plan.description}
                   </p>
+
+                  <div className="mb-5 sm:mb-6 p-3 sm:p-4 bg-white/5 border border-white/10 rounded-lg">
+                    <p className="text-white/90 text-sm font-medium mb-1">Vad ingår:</p>
+                    <p className="text-white/70 text-xs sm:text-sm">
+                      {isVilla 
+                        ? "2 rum och alla övriga utrymmen ingår i paketet. Extra rum kan läggas till som extratjänst (300 kr per rum)."
+                        : "1 rum och alla övriga utrymmen ingår i paketet. Extra rum kan läggas till som extratjänst (300 kr per rum)."}
+                    </p>
+                  </div>
 
                   <div className="mb-5 sm:mb-6">
                     <div

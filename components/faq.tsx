@@ -33,12 +33,12 @@ export default function FaqSection() {
     {
       question: "Vad kostar era tjänster?",
       answer:
-        "För lägenheter: Fotografi 2 200 kr, Video 2 200 kr, eller Fotografi + Video 3 300 kr (rabatterat från 4 400 kr). För villor: Fotografi 3 200 kr, Video 3 200 kr, eller Fotografi + Video 4 800 kr (rabatterat från 6 400 kr). Alla priser är exkl. moms.",
+        "För lägenheter: Fotografi 1 400 kr, Video 2 200 kr, eller Fotografi + Video 2 700 kr. För villor: Fotografi 2 600 kr, Video 3 200 kr, eller Fotografi + Video 4 000 kr. Alla priser är exkl. moms. För lägenheter ingår 1 rum och alla övriga utrymmen. För villor ingår 2 rum och alla övriga utrymmen. Extra rum kan läggas till som extratjänst (300 kr per rum).",
     },
     {
       question: "Vilka extratjänster erbjuder ni?",
       answer:
-        "Vi erbjuder 3D-planritning (+450 kr), Foto med säsongsbyte - digital omvandling av bilder för att visa bostaden under olika årstider (+250 kr), samt Videor av fastighet med mäklarpresentation (+550 kr).",
+        "Vi erbjuder Extra rum (300 kr per rum), 3D-planritning (+450 kr), Foto med säsongsbyte - digital omvandling av bilder för att visa bostaden under olika årstider (+250 kr), samt Videor av fastighet med mäklarpresentation (+550 kr).",
     },
     {
       question: "Hur bokar jag en fotografering eller video?",

@@ -21,7 +21,7 @@ export default function StructuredData() {
     },
     telephone: "+46763441168",
     email: "info@exposia.se",
-    priceRange: "2200-5000 SEK",
+    priceRange: "1400-4000 SEK",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
@@ -66,16 +66,16 @@ export default function StructuredData() {
       {
         "@type": "Offer",
         name: "Fastighetsfotografi - Lägenhet",
-        price: "2200",
+        price: "1400",
         priceCurrency: "SEK",
-        description: "1 session med 20-25 interiörfoton, 3 exteriörfoton, 1 skymningsbild, 3 drönarbilder och 1 planritning. 24h leverans.",
+        description: "1 session med 20-25 interiörfoton, 3 exteriörfoton, 1 skymningsbild, 3 drönarbilder och 1 planritning. 1 rum och alla övriga utrymmen ingår. 24h leverans.",
       },
       {
         "@type": "Offer",
         name: "Fastighetsfotografi - Villa",
-        price: "3200",
+        price: "2600",
         priceCurrency: "SEK",
-        description: "1 session med 20-25 interiörfoton, 3 exteriörfoton, 1 skymningsbild, 3 drönarbilder och 1 planritning. 24h leverans.",
+        description: "1 session med 20-25 interiörfoton, 3 exteriörfoton, 1 skymningsbild, 3 drönarbilder och 1 planritning. 2 rum och alla övriga utrymmen ingår. 24h leverans.",
       },
       {
         "@type": "Offer",
@@ -94,16 +94,16 @@ export default function StructuredData() {
       {
         "@type": "Offer",
         name: "Fotografi + Video - Lägenhet",
-        price: "3300",
+        price: "2700",
         priceCurrency: "SEK",
-        description: "Kombinerat paket med allt från fotografi och video. 25% rabatt. 24h leverans.",
+        description: "Kombinerat paket med allt från fotografi och video. 1 rum och alla övriga utrymmen ingår. 24h leverans.",
       },
       {
         "@type": "Offer",
         name: "Fotografi + Video - Villa",
-        price: "4800",
+        price: "4000",
         priceCurrency: "SEK",
-        description: "Kombinerat paket med allt från fotografi och video. 25% rabatt. 24h leverans.",
+        description: "Kombinerat paket med allt från fotografi och video. 2 rum och alla övriga utrymmen ingår. 24h leverans.",
       },
     ],
   };
