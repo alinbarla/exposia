@@ -42,6 +42,23 @@ function SuccessContent() {
     }
   }, [searchParams, router]);
 
+  // Google Ads conversion tracking - fires when page loads (purchase completed)
+  useEffect(() => {
+    // Wait for gtag to be available (from GTM)
+    const fireConversion = () => {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'conversion_event_purchase_1', {
+          // <event_parameters>
+        });
+      } else {
+        // Retry after a short delay if gtag isn't ready yet
+        setTimeout(fireConversion, 100);
+      }
+    };
+    
+    fireConversion();
+  }, []);
+
   if (!orderData) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
