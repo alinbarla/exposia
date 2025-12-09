@@ -88,7 +88,7 @@ export default function ModernHero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="block"
               >
-                Fastighetsfotografi
+                Professionell Fastighetsfotografi
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export default function ModernHero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent block"
               >
-                & Bostadsvideo Stockholm
+                & Bostadsvideo i Stockholm
               </motion.span>
             </h1>
 
