@@ -27,11 +27,11 @@ export default function ModernFooter() {
               <p>Telefon: <a href="tel:0763441168" className="text-amber-400 hover:text-amber-300">076-344 11 68</a></p>
             </div>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+              <a href="https://facebook.com/exposia" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
+              <a href="https://instagram.com/exposia" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
@@ -106,10 +106,10 @@ export default function ModernFooter() {
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm mb-4 md:mb-0">© {new Date().getFullYear()} Exposia - Alin Barla. Alla rättigheter förbehållna.</p>
           <div className="flex gap-6">
-            <Link href="#" className="text-white/50 hover:text-white text-sm transition-colors">
+            <Link href="/integritetspolicy" className="text-white/50 hover:text-white text-sm transition-colors">
               Integritetspolicy
             </Link>
-            <Link href="#" className="text-white/50 hover:text-white text-sm transition-colors">
+            <Link href="/villkor" className="text-white/50 hover:text-white text-sm transition-colors">
               Villkor
             </Link>
           </div>

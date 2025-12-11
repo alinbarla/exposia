@@ -1,12 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 
 export default function FaqSection() {
   const faqs = [
@@ -23,7 +17,7 @@ export default function FaqSection() {
     {
       question: "Vad ingår i videopaketet?",
       answer:
-        "Videopaketet inkluderar en 30 sekunders video (horisontell eller vertikal) som presenterar bostaden professionellt. Drönarvideo ingår automatiskt i paketet för att ge en komplett bild av fastigheten.",
+        "Videopaketet inkluderar en 30–45 sekunders video (horisontell eller vertikal) som presenterar bostaden professionellt. Drönarvideo och stabiliserad walkthrough ingår automatiskt för att ge en komplett bild av fastigheten.",
     },
     {
       question: "Kan jag kombinera fotografering och video?",
@@ -38,7 +32,7 @@ export default function FaqSection() {
     {
       question: "Vilka extratjänster erbjuder ni?",
       answer:
-        "Vi erbjuder Extra rum (300 kr per rum), 3D-planritning (+450 kr), Foto med säsongsbyte - digital omvandling av bilder för att visa bostaden under olika årstider (+250 kr), samt Videor av fastighet med mäklarpresentation (+550 kr).",
+        "Vi erbjuder Extra rum (300 kr per rum), 3D-planritning och 3D-walkthrough (+450 kr), virtuella visningar, extra drönarbilder/sekvenser, foto med säsongsbyte (+250 kr) och videor med mäklarpresentation (+550 kr).",
     },
     {
       question: "Hur bokar jag en fotografering eller video?",
@@ -84,30 +78,26 @@ export default function FaqSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-3 sm:space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <AccordionItem 
-                  value={`item-${index}`}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden"
-                >
-                  <AccordionTrigger className="px-4 sm:px-6 py-4 sm:py-4 text-base sm:text-lg font-medium hover:no-underline hover:bg-white/5 text-left min-h-[56px]">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 sm:px-6 py-4 sm:py-4 text-base sm:text-base text-white/70 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              </motion.div>
-            ))}
-          </Accordion>
+        <div className="max-w-3xl mx-auto space-y-4 sm:space-y-5">
+          {faqs.map((faq, index) => (
+            <motion.article
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 sm:p-6"
+              itemScope
+              itemType="https://schema.org/Question"
+            >
+              <h3 className="text-lg sm:text-xl font-semibold mb-2" itemProp="name">
+                {faq.question}
+              </h3>
+              <p className="text-base sm:text-base text-white/70 leading-relaxed" itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
+                <span itemProp="text">{faq.answer}</span>
+              </p>
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>

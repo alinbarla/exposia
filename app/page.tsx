@@ -6,6 +6,7 @@ import Testimonials from "@/components/testimonials";
 import Pricing from "@/components/pricing";
 import FaqSection from "@/components/faq";
 import Cta from "@/components/cta";
+import LocalSeoSection from "@/components/local-seo";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Features />
         <Testimonials />
         <Pricing />
+        <LocalSeoSection />
         <FaqSection />
         <Cta />
       </article>

@@ -37,8 +37,8 @@ export default function StructuredData() {
       closes: "20:00",
     },
     sameAs: [
-      "https://www.facebook.com/exposia",
-      "https://www.instagram.com/exposia",
+      "https://facebook.com/exposia",
+      "https://instagram.com/exposia",
       "https://www.linkedin.com/company/exposia",
     ],
     founder: {
@@ -168,6 +168,65 @@ export default function StructuredData() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Hur lång tid tar det att få bilderna och videorna?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Vi garanterar leverans inom 24 timmar efter fotograferingen. Alla bilder och videor levereras i hög kvalitet och är redo att användas direkt i din marknadsföring.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Vad ingår i fotograferingspaketet?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Fotograferingspaketet inkluderar: 1 session med 20-25 interiörfoton, 3 exteriörfoton, 1 skymningsbild, 3 drönarbilder och 1 planritning. För lägenheter ingår 1 rum och alla övriga utrymmen. För villor ingår 2 rum och alla övriga utrymmen.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Vad ingår i videopaketet?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Videopaketet inkluderar en 30–45 sekunders video (horisontell eller vertikal) med drönarvideo och stabiliserad walkthrough inomhus. Levereras färdigt för Hemnet och sociala medier.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Vilka extratjänster erbjuder ni?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Vi erbjuder extra rum (300 kr per rum), 3D-planritning och 3D-walkthrough, virtuella visningar, ytterligare drönarbilder och säsongsbyten av foto samt videor med mäklarpresentation.",
+        },
+      },
+    ],
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    author: {
+      "@type": "Person",
+      name: "Karin Hildingsson",
+    },
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Exposia",
+    },
+    reviewBody:
+      "Mycket engagerad och väldigt fina bilder. Snabb respons och bra kommunikation hela vägen!",
+  };
+
   // Site Navigation Element schema for better sitelinks support
   const siteNavigationSchema = {
     "@context": "https://schema.org",
@@ -229,6 +288,14 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
     </>
   );

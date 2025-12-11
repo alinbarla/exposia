@@ -38,6 +38,36 @@ export default function ModernTestimonials() {
       company: "Mäklarmästaren",
       rating: 5,
     },
+    {
+      quote:
+        "Fantastiska drönarbilder och video som verkligen lyfte objektet. Levererat på mindre än ett dygn.",
+      author: "Jonas Wallin",
+      role: "Fastighetsmäklare",
+      avatar:
+        "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
+      company: "Notar",
+      rating: 5,
+    },
+    {
+      quote:
+        "Exposia tog hand om allt: stylingtips, foto, video och 3D-ritning. Resultatet gav fler bokade visningar.",
+      author: "Lisa Eklund",
+      role: "Säljare",
+      avatar:
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
+      company: "Privatkund, Stockholm",
+      rating: 5,
+    },
+    {
+      quote:
+        "Tydlig kommunikation, punktlig på plats och flexibla med önskemål om extra vinklar. Rekommenderas varmt.",
+      author: "Maria Sjöberg",
+      role: "Projektledare",
+      avatar:
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
+      company: "Bygg & Bo Stockholm",
+      rating: 5,
+    },
   ]
 
   const [current, setCurrent] = useState(0)
