@@ -62,19 +62,6 @@ export default function ModernHero() {
               transition={{ duration: 0.5 }}
               className="flex flex-col sm:flex-row items-center gap-3 mb-4 sm:mb-6"
             >
-              <motion.div
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="relative inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 backdrop-blur-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg shadow-red-500/50 animate-pulse-slow"
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500 to-amber-500 rounded-full blur opacity-75 animate-pulse"></div>
-                <div className="relative flex items-center gap-2">
-                  <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
-                  <span className="font-bold text-white text-xs sm:text-sm tracking-wide">BLACK FRIDAY</span>
-                  <span className="text-white/90 text-xs sm:text-sm">- 25% RABATT</span>
-                </div>
-              </motion.div>
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm">
                 <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-amber-400" />
                 <span className="font-medium">Professionell fastighetsfotografi & videografi</span>

@@ -85,9 +85,7 @@ export default function ModernPricing() {
     {
       name: "Fotografi + Video",
       description: "Alla tjänster från fotografi och video",
-      price: isVilla ? 4000 : 2700,
-      fullPrice: isVilla ? 5800 : 3600, // Fotografi (2600/1400) + Video (3200/2200)
-      discount: Math.round((1 - (isVilla ? 4000 : 2700) / (isVilla ? 5800 : 3600)) * 100),
+      price: isVilla ? 5800 : 3600,
       features: [
         "1 session med 20-25 interiörfoton",
         "3 exteriörfoton",
@@ -220,16 +218,6 @@ export default function ModernPricing() {
                       <span className="text-2xl sm:text-4xl font-bold">
                         {plan.price} kr
                       </span>
-                      {plan.fullPrice ? (
-                        <>
-                          <span className="text-lg sm:text-xl text-white/50 line-through">
-                            {plan.fullPrice} kr
-                          </span>
-                          <span className="bg-gradient-to-r from-red-500 to-amber-500 text-white text-xs sm:text-sm font-bold px-2 py-1 rounded-full">
-                            -{plan.discount}%
-                          </span>
-                        </>
-                      ) : null}
                     </div>
                     <p className="text-white/60 text-xs mt-1">
                       exkl. moms

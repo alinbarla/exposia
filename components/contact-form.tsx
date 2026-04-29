@@ -110,7 +110,7 @@ function ContactFormContent() {
       },
       {
         name: "Fotografi + Video",
-        price: isVilla ? 4000 : 2700,
+        price: isVilla ? 5800 : 3600,
         features: [
           "1 session med 20-25 interiörfoton",
           "3 exteriörfoton",

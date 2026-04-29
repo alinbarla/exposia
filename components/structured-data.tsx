@@ -21,7 +21,7 @@ export default function StructuredData() {
     },
     telephone: "+46763441168",
     email: "info@exposia.se",
-    priceRange: "1400-4000 SEK",
+    priceRange: "1400-5800 SEK",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
@@ -94,14 +94,14 @@ export default function StructuredData() {
       {
         "@type": "Offer",
         name: "Fotografi + Video - Lägenhet",
-        price: "2700",
+        price: "3600",
         priceCurrency: "SEK",
         description: "Kombinerat paket med allt från fotografi och video. 1 rum och alla övriga utrymmen ingår. 24h leverans.",
       },
       {
         "@type": "Offer",
         name: "Fotografi + Video - Villa",
-        price: "4000",
+        price: "5800",
         priceCurrency: "SEK",
         description: "Kombinerat paket med allt från fotografi och video. 2 rum och alla övriga utrymmen ingår. 24h leverans.",
       },

@@ -22,12 +22,12 @@ export default function FaqSection() {
     {
       question: "Kan jag kombinera fotografering och video?",
       answer:
-        "Ja! Vi erbjuder ett kombinerat paket 'Fotografi + Video' som ger dig allt från båda paketen till ett förmånligt pris. Du sparar 25% jämfört med att boka tjänsterna separat.",
+        "Ja! Vi erbjuder ett kombinerat paket 'Fotografi + Video' som ger dig allt från båda paketen i ett samlat upplägg.",
     },
     {
       question: "Vad kostar era tjänster?",
       answer:
-        "För lägenheter: Fotografi 1 400 kr, Video 2 200 kr, eller Fotografi + Video 2 700 kr. För villor: Fotografi 2 600 kr, Video 3 200 kr, eller Fotografi + Video 4 000 kr. Alla priser är exkl. moms. För lägenheter ingår 1 rum och alla övriga utrymmen. För villor ingår 2 rum och alla övriga utrymmen. Extra rum kan läggas till som extratjänst (300 kr per rum).",
+        "För lägenheter: Fotografi 1 400 kr, Video 2 200 kr, eller Fotografi + Video 3 600 kr. För villor: Fotografi 2 600 kr, Video 3 200 kr, eller Fotografi + Video 5 800 kr. Alla priser är exkl. moms. För lägenheter ingår 1 rum och alla övriga utrymmen. För villor ingår 2 rum och alla övriga utrymmen. Extra rum kan läggas till som extratjänst (300 kr per rum).",
     },
     {
       question: "Vilka extratjänster erbjuder ni?",
