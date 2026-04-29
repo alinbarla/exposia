@@ -75,7 +75,7 @@ export default function ModernHero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="block"
               >
-                Professionell Fastighetsfotografi
+                Professionell Fastighetsfotografi 
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
